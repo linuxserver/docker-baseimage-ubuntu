@@ -44,5 +44,3 @@ RUN \
 COPY root/ /
 
 ENTRYPOINT ["/init"]
-
-
