@@ -7,7 +7,7 @@ ENV HOME="/root"
 ENV TERM="xterm"
 
 # set version for s6 overlay
-ARG OVERLAY_VERSION="v1.18.1.3"
+ARG OVERLAY_VERSION="v1.18.1.5"
 ARG OVERLAY_ARCH="amd64"
 ARG OVERLAY_URL="https://github.com/just-containers/s6-overlay/releases/download"
 ARG OVERLAY_WWW="${OVERLAY_URL}"/"${OVERLAY_VERSION}"/s6-overlay-"${OVERLAY_ARCH}".tar.gz
@@ -21,11 +21,16 @@ RUN \
 	/config \
 	/defaults
 
-# install packages
+# copy sources
+COPY sources.list /etc/apt/
+
+# install apt-utils
 RUN \
  apt-get update && \
  apt-get install -y \
 	apt-utils && \
+
+# install packages
  apt-get install -y \
 	curl && \
 
