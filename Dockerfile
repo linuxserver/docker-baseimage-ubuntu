@@ -21,11 +21,25 @@ RUN \
 	/config \
 	/defaults
 
-# install packages
+# install apt-utils
 RUN \
  apt-get update && \
  apt-get install -y \
 	apt-utils && \
+
+# cleanup
+ apt-get clean && \
+ rm -rf \
+	/tmp/* \
+	/var/lib/apt/lists/* \
+	/var/tmp/*
+
+# copy sources
+COPY sources.list /etc/apt/
+
+# install packages
+RUN \
+ apt-get update && \
  apt-get install -y \
 	curl && \
 
