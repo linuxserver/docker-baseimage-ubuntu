@@ -16,9 +16,3 @@ If you want to comment\contribute to this image, are looking for support on any 
 * [forum.linuxserver.io][forumurl]
 * [IRC][ircurl] on freenode at `#linuxserver.io`
 * [Podcast][podcasturl] covers everything to do with getting the most from your Linux Server plus a focus on all things Docker and containerisation!
-
-
-
-
-
-
