@@ -10,6 +10,8 @@ ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/root" \
 TERM="xterm"
 
+ENV test="test"
+
 # copy sources
 COPY sources.list /etc/apt/
 
