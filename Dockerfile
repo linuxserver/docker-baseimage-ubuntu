@@ -8,13 +8,18 @@ ARG OVERLAY_ARCH="amd64"
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/root" \
+LANGUAGE="en_US.UTF-8" \
+LANG="en_US.UTF-8" \
 TERM="xterm"
 
 # copy sources
 COPY sources.list /etc/apt/
 
-# install apt-utils
+# generate locale
 RUN \
+ locale-gen en_US.UTF-8 && \
+
+# install apt-utils
  apt-get update && \
  apt-get install -y \
 	apt-utils && \
