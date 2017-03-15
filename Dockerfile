@@ -13,8 +13,11 @@ TERM="xterm"
 # copy sources
 COPY sources.list /etc/apt/
 
-# install apt-utils
+# generate locale
 RUN \
+ locale-gen en_US.UTF-8 && \
+
+# install apt-utils
  apt-get update && \
  apt-get install -y \
 	apt-utils && \
