@@ -15,18 +15,19 @@ TERM="xterm"
 # copy sources
 COPY sources.list /etc/apt/
 
-# generate locale
+# install apt-utils and locales
 RUN \
- locale-gen en_US.UTF-8 && \
-
-# install apt-utils
  apt-get update && \
  apt-get install -y \
-	apt-utils && \
+	apt-utils \
+	locales && \
 
 # install packages
  apt-get install -y \
 	curl && \
+
+# generate locale
+ locale-gen en_US.UTF-8 && \
 
 # add s6 overlay
  curl -o \
