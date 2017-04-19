@@ -12,6 +12,8 @@ LANGUAGE="en_US.UTF-8" \
 LANG="en_US.UTF-8" \
 TERM="xterm"
 
+ENV test="test"
+
 # copy sources
 COPY sources.list /etc/apt/
 
