@@ -7,7 +7,7 @@
 
 [Dockerfile](https://github.com/linuxserver/docker-baseimage-xenial/blob/master/Dockerfile)
 
-[![](https://images.microbadger.com/badges/image/lsiobase/xenial.svg)](https://microbadger.com/images/lsiobase/xenial "Get your own image badge on microbadger.com")[![Build Status](http://jenkins.linuxserver.io:8080/job/Dockers/job/BaseImages/job/lsiobase-xenial/badge/icon)](http://jenkins.linuxserver.io:8080/job/Dockers/job/BaseImages/job/lsiobase-xenial/)
+[![](https://images.microbadger.com/badges/image/lsiobase/xenial.svg)](https://microbadger.com/images/lsiobase/xenial "Get your own image badge on microbadger.com")
 
 ### This base container is not aimed at public consumption. It exists to serve as a single endpoint for LinuxServer.io containers and is based upon [Ubuntu Xenial](https://hub.docker.com/_/ubuntu/) and [S6 overlay](https://github.com/just-containers/s6-overlay).
 
