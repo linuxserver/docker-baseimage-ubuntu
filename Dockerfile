@@ -1,5 +1,4 @@
 FROM lsiobase/xenial-root-x86
-MAINTAINER sparklyballs
 
 # set version for s6 overlay
 ARG OVERLAY_VERSION="v1.19.1.1"
@@ -15,39 +14,32 @@ TERM="xterm"
 # copy sources
 COPY sources.list /etc/apt/
 
-# install apt-utils and locales
 RUN \
+ echo "**** install apt-utils and locales ****" && \
  apt-get update && \
  apt-get install -y \
 	apt-utils \
 	locales && \
-
-# install packages
+ echo "**** install packages ****" && \
  apt-get install -y \
 	curl \
 	tzdata && \
-
-# generate locale
+ echo "**** generate locale ****" && \
  locale-gen en_US.UTF-8 && \
-
-# add s6 overlay
+ echo "**** add s6 overlay ****" && \
  curl -o \
  /tmp/s6-overlay.tar.gz -L \
 	"https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-${OVERLAY_ARCH}.tar.gz" && \
  tar xfz \
 	/tmp/s6-overlay.tar.gz -C / && \
-
-# create abc user
+ echo "**** create abc user and make our folders ****" && \
  useradd -u 911 -U -d /config -s /bin/false abc && \
  usermod -G users abc && \
-
-# make our folders
  mkdir -p \
 	/app \
 	/config \
 	/defaults && \
-
-# cleanup
+ echo "**** cleanup ****" && \
  apt-get clean && \
  rm -rf \
 	/tmp/* \
