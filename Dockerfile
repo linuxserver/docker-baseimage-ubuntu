@@ -1,7 +1,7 @@
 FROM lsiobase/xenial-root-x86
 
 # set version for s6 overlay
-ARG OVERLAY_VERSION="v1.19.1.1"
+ARG OVERLAY_VERSION="v1.21.2.2"
 ARG OVERLAY_ARCH="amd64"
 
 # set environment variables
