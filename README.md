@@ -20,16 +20,15 @@
 &nbsp;
 &nbsp;
 
-A custom base image built with [Ubuntu cloud image][appurl] and [S6 overlay](https://github.com/just-containers/s6-overlay).. featuring :-
+[![](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/Dockerfile-Xenial-green.png)](https://github.com/linuxserver/docker-baseimage-ubuntu/blob/xenial/Dockerfile)[![](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/Dockerfile-Bionic-green.png)](https://github.com/linuxserver/docker-baseimage-ubuntu/blob/bionic/Dockerfile)
+[![](https://images.microbadger.com/badges/image/lsiobase/xenial.svg)](https://microbadger.com/images/lsiobase/xenial "Get your own image badge on microbadger.com")
+
+A custom base image built with [Ubuntu cloud image][appurl] and [S6 overlay](https://github.com/just-containers/s6-overlay).. 
+
+Featuring :-
 
  + weekly updates 
  + security updates
 
-
-[![](https://images.microbadger.com/badges/image/lsiobase/xenial.svg)](https://microbadger.com/images/lsiobase/xenial "Get your own image badge on microbadger.com")
-
-[![](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/Dockerfile-Xenial-green.png)](https://github.com/linuxserver/docker-baseimage-ubuntu/blob/xenial/Dockerfile)
-
-[![](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/Dockerfile-Bionic-green.png)](https://github.com/linuxserver/docker-baseimage-ubuntu/blob/bionic/Dockerfile)
 
 
