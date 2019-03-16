@@ -2,15 +2,12 @@
 
 # jenkins variables
 project_name: docker-baseimage-ubuntu
-external_type: github_stable
+external_type: os
 release_type: stable
 release_tag: bionic
 ls_branch: bionic
 repo_vars:
-  - EXT_GIT_BRANCH = 'master'
-  - EXT_USER = 'just-containers'
-  - EXT_REPO = 's6-overlay'
-  - BUILD_VERSION_ARG = 'OVERLAY_VERSION'
+  - BUILD_VERSION_ARG = 'OS'
   - LS_USER = 'linuxserver'
   - LS_REPO = 'docker-baseimage-ubuntu'
   - CONTAINER_NAME = 'baseimage-ubuntu'
