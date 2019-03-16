@@ -1,0 +1,12 @@
+deb http://ports.ubuntu.com/ubuntu-ports/ bionic main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ bionic main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ bionic-updates main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ bionic-updates main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ bionic universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ bionic universe
+deb http://ports.ubuntu.com/ubuntu-ports/ bionic-updates universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ bionic-updates universe
+deb http://ports.ubuntu.com/ubuntu-ports/ bionic-security main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ bionic-security main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ bionic-security universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ bionic-security universe

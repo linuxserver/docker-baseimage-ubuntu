@@ -1,0 +1,29 @@
+---
+
+# jenkins variables
+project_name: docker-baseimage-ubuntu
+external_type: github_stable
+release_type: stable
+release_tag: bionic
+ls_branch: bionic
+repo_vars:
+  - EXT_GIT_BRANCH = 'master'
+  - EXT_USER = 'just-containers'
+  - EXT_REPO = 's6-overlay'
+  - BUILD_VERSION_ARG = 'OVERLAY_VERSION'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-baseimage-ubuntu'
+  - CONTAINER_NAME = 'baseimage-ubuntu'
+  - DOCKERHUB_IMAGE = 'lsiobase/ubuntu'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/ubuntu'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/ubuntu'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='false'
+  - CI_PORT='80'
+  - CI_SSL='true'
+  - CI_DELAY='30'
+  - CI_DOCKERENV='TZ=US/Pacific'
+  - CI_AUTH='user:password'
+  - CI_WEBPATH=''
