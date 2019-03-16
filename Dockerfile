@@ -29,7 +29,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 LABEL MAINTAINER="sparkyballs,TheLamer"
 
 # set version for s6 overlay
-ARG OVERLAY_VERSION
+ARG OVERLAY_VERSION="v1.22.0.0"
 ARG OVERLAY_ARCH="amd64"
 
 # set environment variables
@@ -87,10 +87,6 @@ RUN \
  echo "**** generate locale ****" && \
  locale-gen en_US.UTF-8 && \
  echo "**** add s6 overlay ****" && \
- if [ -z ${OVERLAY_VERSION+x} ]; then \
-        OVERLAY_VERSION=$(curl -sX GET "https://api.github.com/repos/just-containers/s6-overlay/releases/latest" \
-        | awk '/tag_name/{print $4;exit}' FS='[""]'); \
- fi && \
  curl -o \
  /tmp/s6-overlay.tar.gz -L \
 	"https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-${OVERLAY_ARCH}.tar.gz" && \
