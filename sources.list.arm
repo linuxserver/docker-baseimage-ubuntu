@@ -1,0 +1,12 @@
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ xenial main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial-updates main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ xenial-updates main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ xenial universe
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial-updates universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ xenial-updates universe
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial-security main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ xenial-security main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial-security universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ xenial-security universe
