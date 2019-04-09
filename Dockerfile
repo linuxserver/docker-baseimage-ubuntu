@@ -9,6 +9,7 @@ ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/root" \
 LANGUAGE="en_US.UTF-8" \
 LANG="en_US.UTF-8" \
+LC_ALL="en_US.UTF-8" \
 TERM="xterm"
 
 # copy sources
@@ -26,6 +27,7 @@ RUN \
 	tzdata && \
  echo "**** generate locale ****" && \
  locale-gen en_US.UTF-8 && \
+ echo -e 'LANG="en_US.UTF-8"\nLANGUAGE="en_US:en"\n' > /etc/default/locale && \
  echo "**** add s6 overlay ****" && \
  curl -o \
  /tmp/s6-overlay.tar.gz -L \
