@@ -25,8 +25,6 @@ RUN \
 # Runtime stage
 FROM scratch
 COPY --from=rootfs-stage /root-out/ /
-# Add qemu to build on x86_64 systems
-COPY qemu-arm-static /usr/bin
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL MAINTAINER="sparkyballs,TheLamer"
 
@@ -101,6 +99,11 @@ RUN \
 	/app \
 	/config \
 	/defaults && \
+ echo "**** add qemu ****" && \
+ curl -o \
+ /usr/bin/qemu-arm-static -L \
+	"https://lsio-ci.ams3.digitaloceanspaces.com/qemu-arm-static" && \
+ chmod +x /usr/bin/qemu-arm-static && \
  echo "**** cleanup ****" && \
  apt-get clean && \
  rm -rf \
