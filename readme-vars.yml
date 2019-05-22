@@ -1,7 +1,7 @@
 ---
 
 # project information
-project_name: base-ubuntu-example
+project_name: baseimage-ubuntu
 full_custom_readme: |
   {% raw -%}
   [linuxserverurl]: https://linuxserver.io
