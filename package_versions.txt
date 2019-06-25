@@ -95,7 +95,7 @@ libsemanage12.3-1build3
 libsemanage-common2.3-1build3
 libsepol12.4-2
 libsmartcols12.27.1-6ubuntu3.7
-libsqlite3-03.11.0-1ubuntu1.1
+libsqlite3-03.11.0-1ubuntu1.2
 libss21.42.13-1ubuntu1
 libssl1.0.01.0.2g-1ubuntu4.15
 libstdc++65.4.0-6ubuntu1~16.04.11
