@@ -1,5 +1,4 @@
 FROM alpine:3.9 as rootfs-stage
-MAINTAINER sparkyballs,thelamer
 
 # environment
 ENV REL=bionic
@@ -28,7 +27,7 @@ COPY --from=rootfs-stage /root-out/ /
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL MAINTAINER="sparkyballs,TheLamer"
+LABEL maintainer="TheLamer"
 
 # set version for s6 overlay
 ARG OVERLAY_VERSION="v1.22.0.0"
