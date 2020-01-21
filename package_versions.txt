@@ -51,7 +51,7 @@ libdevmapper1.02.12:1.02.110-1ubuntu10
 libfdisk12.27.1-6ubuntu3.9
 libffi63.2.1-4
 libgcc11:6.0.1-0ubuntu1
-libgcrypt201.6.5-2ubuntu0.5
+libgcrypt201.6.5-2ubuntu0.6
 libgmp102:6.1.0+dfsg-2
 libgnutls303.4.10-4ubuntu1.6
 libgpg-error01.21-2ubuntu1
