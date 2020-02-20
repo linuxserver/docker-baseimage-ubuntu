@@ -89,11 +89,15 @@ RUN \
  echo "**** generate locale ****" && \
  locale-gen en_US.UTF-8 && \
  echo "**** add s6 overlay ****" && \
+ rm -f /bin && \
  curl -o \
  /tmp/s6-overlay.tar.gz -L \
 	"https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-${OVERLAY_ARCH}.tar.gz" && \
  tar xfz \
 	/tmp/s6-overlay.tar.gz -C / && \
+ mv /bin/* /usr/bin && \
+ rm -Rf /bin && \
+ ln -s /usr/bin /bin && \
  echo "**** create abc user and make our folders ****" && \
  useradd -u 911 -U -d /config -s /bin/false abc && \
  usermod -G users abc && \
