@@ -82,8 +82,7 @@ RUN \
 	apt-utils \
 	locales && \
  echo "**** install packages ****" && \
- apt-get install --no-install-recommends -y \
-	ca-certificates \
+ apt-get install -y \
 	curl \
 	gnupg \
 	libc6 \
