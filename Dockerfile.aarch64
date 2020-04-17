@@ -82,9 +82,11 @@ RUN \
 	apt-utils \
 	locales && \
  echo "**** install packages ****" && \
- apt-get install -y \
+ apt-get install --no-install-recommends -y \
+	ca-certificates \
 	curl \
 	gnupg \
+	libc6 \
 	tzdata && \
  echo "**** generate locale ****" && \
  locale-gen en_US.UTF-8 && \
