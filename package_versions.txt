@@ -33,6 +33,7 @@ grep3.4-1
 gzip1.10-0ubuntu4
 hostname3.23
 init-system-helpers1.57
+krb5-locales1.17-6ubuntu4
 libacl12.2.53-6
 libapt-pkg6.02.0.2
 libasn1-8-heimdal7.7.0+dfsg-1ubuntu1
@@ -96,6 +97,7 @@ libreadline88.0-4
 libroken18-heimdal7.7.0+dfsg-1ubuntu1
 librtmp12.4+20151223.gitfa8646d.1-2build1
 libsasl2-22.1.27+dfsg-2
+libsasl2-modules2.1.27+dfsg-2
 libsasl2-modules-db2.1.27+dfsg-2
 libseccomp22.4.3-1ubuntu1
 libselinux13.0-1build2
@@ -129,6 +131,7 @@ passwd1:4.8.1-1ubuntu5
 perl-base5.30.0-9build1
 pinentry-curses1.1.0-3build1
 procps2:3.3.16-1ubuntu2
+publicsuffix20200303.0012-1
 readline-common8.0-4
 sed4.7-1
 sensible-utils0.0.12+nmu1
