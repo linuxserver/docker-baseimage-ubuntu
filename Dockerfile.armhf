@@ -85,7 +85,6 @@ RUN \
  apt-get install -y \
 	curl \
 	gnupg \
-	libc6 \
 	tzdata && \
  echo "**** generate locale ****" && \
  locale-gen en_US.UTF-8 && \
