@@ -128,7 +128,7 @@ systemd-sysv229-4ubuntu21.28
 sysvinit-utils2.88dsf-59.3ubuntu2
 sysv-rc2.88dsf-59.3ubuntu2
 tar1.28-2.1ubuntu0.1
-tzdata2019c-0ubuntu0.16.04
+tzdata2020a-0ubuntu0.16.04
 ubuntu-keyring2012.05.19
 util-linux2.27.1-6ubuntu3.10
 zlib1g1:1.2.8.dfsg-2ubuntu4.3
