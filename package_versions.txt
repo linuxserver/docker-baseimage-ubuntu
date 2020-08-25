@@ -7,7 +7,7 @@ bash4.3-14ubuntu1.4
 bsdutils1:2.27.1-6ubuntu3.10
 ca-certificates20190110~16.04.1
 coreutils8.25-2ubuntu3~16.04
-curl7.47.0-1ubuntu2.15
+curl7.47.0-1ubuntu2.16
 dash0.5.8-2.1ubuntu2
 debconf1.5.58ubuntu2
 debianutils4.7
@@ -44,7 +44,7 @@ libcap2-bin1:2.24-12
 libc-bin2.23-0ubuntu11.2
 libcomerr21.42.13-1ubuntu1.2
 libcryptsetup42:1.6.6-5ubuntu2.1
-libcurl3-gnutls7.47.0-1ubuntu2.15
+libcurl3-gnutls7.47.0-1ubuntu2.16
 libdb5.35.3.28-11ubuntu0.2
 libdebconfclient00.198ubuntu1
 libdevmapper1.02.12:1.02.110-1ubuntu10
