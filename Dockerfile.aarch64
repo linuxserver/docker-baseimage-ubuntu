@@ -1,4 +1,4 @@
-FROM alpine:3.9 as rootfs-stage
+FROM alpine:3.12 as rootfs-stage
 
 # environment
 ENV REL=bionic
