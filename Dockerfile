@@ -1,7 +1,7 @@
 FROM alpine:3.9 as rootfs-stage
 
 # environment
-ENV REL=bionic
+ENV REL=focal
 ENV ARCH=amd64
 # install packages
 RUN \
@@ -16,7 +16,8 @@ RUN \
  mkdir /root-out && \
  curl -o \
 	/rootfs.tar.gz -L \
-	https://partner-images.canonical.com/core/${REL}/current/ubuntu-${REL}-core-cloudimg-${ARCH}-root.tar.gz && \
+	https://partner-images.canonical.com/core/${
+	}/current/ubuntu-${REL}-core-cloudimg-${ARCH}-root.tar.gz && \
  tar xf \
         /rootfs.tar.gz -C \
         /root-out
