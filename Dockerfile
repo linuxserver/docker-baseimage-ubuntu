@@ -8,6 +8,7 @@ RUN \
  apk add --no-cache \
         bash \
         curl \
+        iproute2 \
         tzdata \
         xz
 
@@ -84,6 +85,7 @@ RUN \
  echo "**** install packages ****" && \
  apt-get install -y \
 	curl \
+	iproute2 \
 	tzdata && \
  echo "**** generate locale ****" && \
  locale-gen en_US.UTF-8 && \
