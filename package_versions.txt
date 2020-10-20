@@ -77,10 +77,10 @@ libncurses56.0+20160213-1ubuntu1
 libncursesw56.0+20160213-1ubuntu1
 libnettle63.2-1ubuntu0.16.04.1
 libp11-kit00.23.2-5~ubuntu16.04.1
-libpam0g1.1.8-3.2ubuntu2.1
-libpam-modules1.1.8-3.2ubuntu2.1
-libpam-modules-bin1.1.8-3.2ubuntu2.1
-libpam-runtime1.1.8-3.2ubuntu2.1
+libpam0g1.1.8-3.2ubuntu2.3
+libpam-modules1.1.8-3.2ubuntu2.3
+libpam-modules-bin1.1.8-3.2ubuntu2.3
+libpam-runtime1.1.8-3.2ubuntu2.3
 libpcre32:8.38-3.1
 libprocps42:3.3.10-4ubuntu2.5
 libreadline66.3-8ubuntu2
