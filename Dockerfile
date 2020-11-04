@@ -99,6 +99,7 @@ RUN \
 	/app \
 	/config \
 	/defaults && \
+ mv /usr/bin/with-contenv /usr/bin/with-contenvb && \
  echo "**** cleanup ****" && \
  apt-get clean && \
  rm -rf \
