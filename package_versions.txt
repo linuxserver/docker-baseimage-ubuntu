@@ -76,7 +76,7 @@ libmount12.27.1-6ubuntu3.10
 libncurses56.0+20160213-1ubuntu1
 libncursesw56.0+20160213-1ubuntu1
 libnettle63.2-1ubuntu0.16.04.1
-libp11-kit00.23.2-5~ubuntu16.04.1
+libp11-kit00.23.2-5~ubuntu16.04.2
 libpam0g1.1.8-3.2ubuntu2.3
 libpam-modules1.1.8-3.2ubuntu2.3
 libpam-modules-bin1.1.8-3.2ubuntu2.3
