@@ -36,6 +36,7 @@ ARG OVERLAY_ARCH="amd64"
 # add s6 overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-${OVERLAY_ARCH}-installer /tmp/
 RUN chmod +x /tmp/s6-overlay-${OVERLAY_ARCH}-installer && /tmp/s6-overlay-${OVERLAY_ARCH}-installer / && rm /tmp/s6-overlay-${OVERLAY_ARCH}-installer
+COPY patch/ /tmp/patch
 
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -89,6 +90,7 @@ RUN \
  apt-get install -y \
 	curl \
 	gnupg \
+	patch \
 	tzdata && \
  echo "**** generate locale ****" && \
  locale-gen en_US.UTF-8 && \
@@ -100,7 +102,10 @@ RUN \
 	/config \
 	/defaults && \
  mv /usr/bin/with-contenv /usr/bin/with-contenvb && \
+ patch -u /etc/s6/init/init-stage2 -i /tmp/patch/etc/s6/init/init-stage2.patch && \
  echo "**** cleanup ****" && \
+ apt-get remove -y patch && \
+ apt-get autoremove && \
  apt-get clean && \
  rm -rf \
 	/tmp/* \
