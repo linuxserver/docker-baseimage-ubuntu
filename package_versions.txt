@@ -5,7 +5,7 @@ base-files9.4ubuntu4.13
 base-passwd3.5.39
 bash4.3-14ubuntu1.4
 bsdutils1:2.27.1-6ubuntu3.10
-ca-certificates20201027ubuntu0.16.04.1
+ca-certificates20210119~16.04.1
 coreutils8.25-2ubuntu3~16.04
 curl7.47.0-1ubuntu2.18
 dash0.5.8-2.1ubuntu2
@@ -69,7 +69,7 @@ libkmod222-1ubuntu5.2
 libkrb5-26-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
 libkrb5-31.13.2+dfsg-5ubuntu2.2
 libkrb5support01.13.2+dfsg-5ubuntu2.2
-libldap-2.4-22.4.42+dfsg-2ubuntu3.11
+libldap-2.4-22.4.42+dfsg-2ubuntu3.12
 liblz4-10.0~r131-2ubuntu2
 liblzma55.1.1alpha+20120614-2ubuntu2
 libmount12.27.1-6ubuntu3.10
