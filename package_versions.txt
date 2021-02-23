@@ -69,7 +69,7 @@ libkmod222-1ubuntu5.2
 libkrb5-26-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
 libkrb5-31.13.2+dfsg-5ubuntu2.2
 libkrb5support01.13.2+dfsg-5ubuntu2.2
-libldap-2.4-22.4.42+dfsg-2ubuntu3.12
+libldap-2.4-22.4.42+dfsg-2ubuntu3.13
 liblz4-10.0~r131-2ubuntu2
 liblzma55.1.1alpha+20120614-2ubuntu2
 libmount12.27.1-6ubuntu3.10
@@ -97,7 +97,7 @@ libsepol12.4-2
 libsmartcols12.27.1-6ubuntu3.10
 libsqlite3-03.11.0-1ubuntu1.5
 libss21.42.13-1ubuntu1.2
-libssl1.0.01.0.2g-1ubuntu4.18
+libssl1.0.01.0.2g-1ubuntu4.19
 libstdc++65.4.0-6ubuntu1~16.04.12
 libsystemd0229-4ubuntu21.29
 libtasn1-64.7-3ubuntu0.16.04.3
@@ -116,7 +116,7 @@ mount2.27.1-6ubuntu3.10
 multiarch-support2.23-0ubuntu11.2
 ncurses-base6.0+20160213-1ubuntu1
 ncurses-bin6.0+20160213-1ubuntu1
-openssl1.0.2g-1ubuntu4.18
+openssl1.0.2g-1ubuntu4.19
 passwd1:4.2-3.1ubuntu5.4
 perl-base5.22.1-9ubuntu0.9
 procps2:3.3.10-4ubuntu2.5
