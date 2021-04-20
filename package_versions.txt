@@ -60,7 +60,7 @@ libgssapi-krb5-21.13.2+dfsg-5ubuntu2.2
 libhcrypto4-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
 libheimbase1-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
 libheimntlm0-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
-libhogweed43.2-1ubuntu0.16.04.1
+libhogweed43.2-1ubuntu0.16.04.2
 libhx509-5-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
 libidn111.32-3ubuntu1.2
 libk5crypto31.13.2+dfsg-5ubuntu2.2
@@ -75,7 +75,7 @@ liblzma55.1.1alpha+20120614-2ubuntu2
 libmount12.27.1-6ubuntu3.10
 libncurses56.0+20160213-1ubuntu1
 libncursesw56.0+20160213-1ubuntu1
-libnettle63.2-1ubuntu0.16.04.1
+libnettle63.2-1ubuntu0.16.04.2
 libp11-kit00.23.2-5~ubuntu16.04.2
 libpam0g1.1.8-3.2ubuntu2.3
 libpam-modules1.1.8-3.2ubuntu2.3
@@ -89,7 +89,7 @@ librtmp12.4+20151223.gitfa8646d-1ubuntu0.1
 libsasl2-22.1.26.dfsg1-14ubuntu0.2
 libsasl2-modules2.1.26.dfsg1-14ubuntu0.2
 libsasl2-modules-db2.1.26.dfsg1-14ubuntu0.2
-libseccomp22.4.3-1ubuntu3.16.04.3
+libseccomp22.5.1-1ubuntu1~16.04.1
 libselinux12.4-3build2
 libsemanage12.3-1build3
 libsemanage-common2.3-1build3
@@ -99,10 +99,10 @@ libsqlite3-03.11.0-1ubuntu1.5
 libss21.42.13-1ubuntu1.2
 libssl1.0.01.0.2g-1ubuntu4.19
 libstdc++65.4.0-6ubuntu1~16.04.12
-libsystemd0229-4ubuntu21.29
+libsystemd0229-4ubuntu21.31
 libtasn1-64.7-3ubuntu0.16.04.3
 libtinfo56.0+20160213-1ubuntu1
-libudev1229-4ubuntu21.29
+libudev1229-4ubuntu21.31
 libusb-0.1-42:0.1.12-28
 libustr-1.0-11.0.4-5
 libuuid12.27.1-6ubuntu3.10
@@ -123,8 +123,8 @@ procps2:3.3.10-4ubuntu2.5
 readline-common6.3-8ubuntu2
 sed4.2.2-7
 sensible-utils0.0.9ubuntu0.16.04.1
-systemd229-4ubuntu21.29
-systemd-sysv229-4ubuntu21.29
+systemd229-4ubuntu21.31
+systemd-sysv229-4ubuntu21.31
 sysvinit-utils2.88dsf-59.3ubuntu2
 sysv-rc2.88dsf-59.3ubuntu2
 tar1.28-2.1ubuntu0.2
