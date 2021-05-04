@@ -1,6 +1,6 @@
 adduser3.113+nmu3ubuntu4
-apt1.2.32ubuntu0.2
-apt-utils1.2.32ubuntu0.2
+apt1.2.35
+apt-utils1.2.35
 base-files9.4ubuntu4.13
 base-passwd3.5.39
 bash4.3-14ubuntu1.4
@@ -12,7 +12,7 @@ dash0.5.8-2.1ubuntu2
 debconf1.5.58ubuntu2
 debianutils4.7
 diffutils1:3.3-3
-dpkg1.18.4ubuntu1.6
+dpkg1.18.4ubuntu1.7
 e2fslibs1.42.13-1ubuntu1.2
 e2fsprogs1.42.13-1ubuntu1.2
 findutils4.6.0+git+20160126-2
@@ -30,8 +30,8 @@ insserv1.14.0-5ubuntu3
 krb5-locales1.13.2+dfsg-5ubuntu2.2
 libacl12.2.52-3
 libapparmor12.10.95-0ubuntu2.11
-libapt-inst2.01.2.32ubuntu0.2
-libapt-pkg5.01.2.32ubuntu0.2
+libapt-inst2.01.2.35
+libapt-pkg5.01.2.35
 libasn1-8-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
 libattr11:2.4.47-2
 libaudit11:2.4.5-1ubuntu2.1
@@ -107,6 +107,7 @@ libusb-0.1-42:0.1.12-28
 libustr-1.0-11.0.4-5
 libuuid12.27.1-6ubuntu3.10
 libwind0-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
+libzstd11.3.1+dfsg-1~ubuntu0.16.04.1
 locales2.23-0ubuntu11.2
 login1:4.2-3.1ubuntu5.4
 lsb-base9.20160110ubuntu0.2
