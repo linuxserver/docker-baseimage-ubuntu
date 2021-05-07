@@ -101,6 +101,7 @@ for DOCKER_MOD in "${DOCKER_MODS[@]}"; do
     --silent \
     --header 'GET' \
     "${AUTH_URL}" \
+    | grep -m1 "blobSum \
     | awk -F'"' '{print $4}' \
   )"
   # Determine first and only layer of image
