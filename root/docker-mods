@@ -6,8 +6,8 @@ if [ -z ${DOCKER_MODS+x} ]; then
 fi
 
 # Check for curl
-if [ ! -f /usr/bin/curl ]; then
-  echo "[mod-init] Curl was not found on this system for Docker mods installing"
+if [ ! -f /usr/bin/curl ] || [ ! -f /usr/bin/jq ]; then
+  echo "[mod-init] Curl/JQ was not found on this system for Docker mods installing"
   if [ -f /usr/bin/apt ]; then
     ## Ubuntu
     apt-get update
