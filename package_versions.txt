@@ -108,7 +108,7 @@ libustr-1.0-11.0.4-5
 libuuid12.27.1-6ubuntu3.10
 libwind0-heimdal1.7~git20150920+dfsg-4ubuntu1.16.04.1
 libzstd11.3.1+dfsg-1~ubuntu0.16.04.1
-locales2.23-0ubuntu11.2
+locales2.23-0ubuntu11.3
 login1:4.2-3.1ubuntu5.4
 lsb-base9.20160110ubuntu0.2
 makedev2.3.1-93ubuntu2~ubuntu16.04.1
