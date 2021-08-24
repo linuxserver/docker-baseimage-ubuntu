@@ -97,7 +97,7 @@ libsepol12.4-2
 libsmartcols12.27.1-6ubuntu3.10
 libsqlite3-03.11.0-1ubuntu1.5
 libss21.42.13-1ubuntu1.2
-libssl1.0.01.0.2g-1ubuntu4.19
+libssl1.0.01.0.2g-1ubuntu4.20
 libstdc++65.4.0-6ubuntu1~16.04.12
 libsystemd0229-4ubuntu21.31
 libtasn1-64.7-3ubuntu0.16.04.3
@@ -117,7 +117,7 @@ mount2.27.1-6ubuntu3.10
 multiarch-support2.23-0ubuntu11.3
 ncurses-base6.0+20160213-1ubuntu1
 ncurses-bin6.0+20160213-1ubuntu1
-openssl1.0.2g-1ubuntu4.19
+openssl1.0.2g-1ubuntu4.20
 passwd1:4.2-3.1ubuntu5.4
 perl-base5.22.1-9ubuntu0.9
 procps2:3.3.10-4ubuntu2.5
