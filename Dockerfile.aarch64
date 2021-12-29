@@ -1,7 +1,7 @@
-FROM alpine:3.11 as rootfs-stage
+FROM alpine:3.15 as rootfs-stage
 
 # environment
-ENV REL=focal
+ENV REL=jammy
 ENV ARCH=arm64
 # install packages
 RUN \

@@ -4,8 +4,8 @@
 project_name: docker-baseimage-ubuntu
 external_type: os
 release_type: prerelease
-release_tag: focal
-ls_branch: focal
+release_tag: jammy
+ls_branch: jammy
 repo_vars:
   - BUILD_VERSION_ARG = 'OS'
   - LS_USER = 'linuxserver'

@@ -1,12 +1,12 @@
-deb http://ports.ubuntu.com/ubuntu-ports/ focal main restricted multiverse
-deb-src http://ports.ubuntu.com/ubuntu-ports/ focal main restricted multiverse
-deb http://ports.ubuntu.com/ubuntu-ports/ focal-updates main restricted multiverse
-deb-src http://ports.ubuntu.com/ubuntu-ports/ focal-updates main restricted multiverse
-deb http://ports.ubuntu.com/ubuntu-ports/ focal universe
-deb-src http://ports.ubuntu.com/ubuntu-ports/ focal universe
-deb http://ports.ubuntu.com/ubuntu-ports/ focal-updates universe
-deb-src http://ports.ubuntu.com/ubuntu-ports/ focal-updates universe
-deb http://ports.ubuntu.com/ubuntu-ports/ focal-security main restricted multiverse
-deb-src http://ports.ubuntu.com/ubuntu-ports/ focal-security main restricted multiverse
-deb http://ports.ubuntu.com/ubuntu-ports/ focal-security universe
-deb-src http://ports.ubuntu.com/ubuntu-ports/ focal-security universe
+deb http://ports.ubuntu.com/ubuntu-ports/ jammy main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ jammy main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ jammy-updates main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ jammy-updates main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ jammy universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ jammy universe
+deb http://ports.ubuntu.com/ubuntu-ports/ jammy-updates universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ jammy-updates universe
+deb http://ports.ubuntu.com/ubuntu-ports/ jammy-security main restricted multiverse
+deb-src http://ports.ubuntu.com/ubuntu-ports/ jammy-security main restricted multiverse
+deb http://ports.ubuntu.com/ubuntu-ports/ jammy-security universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ jammy-security universe
