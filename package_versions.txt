@@ -1,6 +1,6 @@
 adduser3.118ubuntu5
-apt2.3.13
-apt-utils2.3.13
+apt2.3.14
+apt-utils2.3.14
 base-files12ubuntu2
 base-passwd3.5.52
 bash5.1-5ubuntu1
@@ -32,7 +32,7 @@ gzip1.10-4ubuntu2
 hostname3.23ubuntu1
 init-system-helpers1.61
 libacl12.2.53-10ubuntu2
-libapt-pkg6.02.3.13
+libapt-pkg6.02.3.14
 libassuan02.5.5-1
 libattr11:2.5.1-1
 libaudit11:3.0-2ubuntu3
@@ -84,7 +84,7 @@ libpcre2-8-010.39-3
 libpcre32:8.39-13build4
 libprocps82:3.3.17-5ubuntu3
 libpsl50.21.0-1.2build1
-libreadline88.1-2build1
+libreadline88.1.2-1
 librtmp12.4+20151223.gitfa8646d.1-2build3
 libsasl2-22.1.27+dfsg2-2build1
 libsasl2-modules2.1.27+dfsg2-2build1
@@ -124,7 +124,7 @@ perl-base5.32.1-3ubuntu3
 pinentry-curses1.1.1-1build1
 procps2:3.3.17-5ubuntu3
 publicsuffix20211207.1025-1
-readline-common8.1-2build1
+readline-common8.1.2-1
 sed4.8-1ubuntu1
 sensible-utils0.0.17
 sysvinit-utils2.96-7ubuntu2
