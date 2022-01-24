@@ -7,7 +7,7 @@ bash5.1-6ubuntu1
 bsdutils1:2.37.2-4ubuntu1
 ca-certificates20211016
 coreutils8.32-4ubuntu3
-curl7.80.0-3
+curl7.81.0-1
 dash0.5.11+git20210903+057cd650a4ed-3
 debconf1.5.79
 debianutils5.5-1ubuntu1
@@ -46,7 +46,7 @@ libcap-ng00.7.9-2.2build2
 libc-bin2.34-0ubuntu3
 libcom-err21.46.5-2ubuntu1
 libcrypt11:4.4.27-1
-libcurl47.80.0-3
+libcurl47.81.0-1
 libdb5.35.3.28+dfsg1-0.8ubuntu2
 libdebconfclient00.256ubuntu4
 libext2fs21.46.5-2ubuntu1
@@ -95,7 +95,7 @@ libsemanage23.3-1
 libsemanage-common3.3-1
 libsepol23.3-1
 libsmartcols12.37.2-4ubuntu1
-libsqlite3-03.36.0-2
+libsqlite3-03.37.2-2
 libss21.46.5-2ubuntu1
 libssh-40.9.6-2
 libssl33.0.1-0ubuntu1
