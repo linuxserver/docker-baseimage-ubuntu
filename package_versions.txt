@@ -1,6 +1,6 @@
 adduser3.118ubuntu5
-apt2.3.15
-apt-utils2.3.15
+apt2.3.15build1
+apt-utils2.3.15build1
 base-files12ubuntu2
 base-passwd3.5.52
 bash5.1-6ubuntu1
@@ -32,7 +32,7 @@ gzip1.10-4ubuntu2
 hostname3.23ubuntu1
 init-system-helpers1.61
 libacl12.3.1-1
-libapt-pkg6.02.3.15
+libapt-pkg6.02.3.15build1
 libassuan02.5.5-1
 libattr11:2.5.1-1
 libaudit11:3.0-2ubuntu3
@@ -40,10 +40,10 @@ libaudit-common1:3.0-2ubuntu3
 libblkid12.37.2-4ubuntu1
 libbrotli11.0.9-2build4
 libbz2-1.01.0.8-5
-libc62.34-0ubuntu3
+libc62.35-0ubuntu1
 libcap21:2.44-1build2
 libcap-ng00.7.9-2.2build2
-libc-bin2.34-0ubuntu3
+libc-bin2.35-0ubuntu1
 libcom-err21.46.5-2ubuntu1
 libcrypt11:4.4.27-1
 libcurl47.81.0-1
@@ -110,7 +110,7 @@ libunistring20.9.10-6
 libuuid12.37.2-4ubuntu1
 libxxhash00.8.1-1
 libzstd11.4.8+dfsg-3
-locales2.34-0ubuntu3
+locales2.35-0ubuntu1
 login1:4.8.1-2ubuntu1
 logsave1.46.5-2ubuntu1
 lsb-base11.1.0ubuntu3
