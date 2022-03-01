@@ -86,9 +86,9 @@ libprocps82:3.3.17-5ubuntu3
 libpsl50.21.0-1.2build1
 libreadline88.1.2-1
 librtmp12.4+20151223.gitfa8646d.1-2build3
-libsasl2-22.1.27+dfsg2-3
-libsasl2-modules2.1.27+dfsg2-3
-libsasl2-modules-db2.1.27+dfsg2-3
+libsasl2-22.1.27+dfsg2-3ubuntu1
+libsasl2-modules2.1.27+dfsg2-3ubuntu1
+libsasl2-modules-db2.1.27+dfsg2-3ubuntu1
 libseccomp22.5.2-2ubuntu2
 libselinux13.3-1
 libsemanage23.3-1
