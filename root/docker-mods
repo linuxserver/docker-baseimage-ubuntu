@@ -6,8 +6,8 @@ if [ -z ${DOCKER_MODS+x} ]; then
 fi
 
 # Check for curl
-if [ ! -f /usr/bin/curl ]; then
-  echo "[mod-init] Curl was not found on this system for Docker mods installing"
+if [ ! -f /usr/bin/curl ] || [ ! -f /usr/bin/jq ]; then
+  write_log "Curl/JQ was not found on this system for Docker mods installing"
   if [ -f /usr/bin/apt ]; then
     ## Ubuntu
     apt-get update
@@ -20,61 +20,141 @@ if [ ! -f /usr/bin/curl ]; then
   fi
 fi
 
-# Main run logic
-echo "[mod-init] Attempting to run Docker Modification Logic"
-IFS='|'
-DOCKER_MODS=(${DOCKER_MODS})
-for DOCKER_MOD in "${DOCKER_MODS[@]}"; do
-  FILENAME=$(echo ${DOCKER_MOD} | sed 's/[:\/]/./g')
-  ENDPOINT=$(echo ${DOCKER_MOD} | awk -F: '{print $1}')
-  USERNAME=$(echo ${ENDPOINT} | awk -F/ '{print $1}')
-  TAG=$(echo ${DOCKER_MOD} | awk -F: '{print $2}')
-  # Kill off modification logic if any of the usernames are banned
-  BLACKLIST=$(curl -s https://raw.githubusercontent.com/linuxserver/docker-mods/master/blacklist.txt)
-  IFS=$'\n'
-  BLACKLIST=(${BLACKLIST})
-  for BANNED in "${BLACKLIST[@]}"; do
-    if [ "${BANNED}" == "${USERNAME,,}" ]; then
-      if [ -z ${RUN_BANNED_MODS+x} ]; then
-        echo "[mod-init] ${DOCKER_MOD} is banned from use due to reported abuse aborting mod logic"
-        exit 0
-      else
-        echo "[mod-init] You have chosen to run banned mods ${DOCKER_MOD} will be applied"
-      fi
-    fi
-  done
-  echo "[mod-init] Applying ${DOCKER_MOD} files to container"
-  # Get Dockerhub token for api operations
-  TOKEN=\
-"$(curl \
-    --silent \
-    --header 'GET' \
-    "https://auth.docker.io/token?service=registry.docker.io&scope=repository:${ENDPOINT}:pull" \
-    | awk -F'"' '{print $4}' \
-  )"
-  # Determine first and only layer of image
-  SHALAYER=\
-"$(curl \
+## Functions
+write_log() {
+  echo "[mod-init] $@"
+}
+
+write_debug() {
+  [[ "$DOCKER_MODS_DEBUG" == "1" ]] && echo "[mod-init-ex:debug] $@"
+}
+
+get_url () {
+  local url="$1"
+  local bearer_token="$2"
+
+  curl \
     --silent \
     --location \
     --request GET \
-    --header "Authorization: Bearer ${TOKEN}" \
-    https://registry-1.docker.io/v2/${ENDPOINT}/manifests/${TAG} \
-    |grep -m1 "blobSum" \
-    | awk -F'"' '{print $4}' \
-  )"
-  # Check if we have allready applied this layer
-  if [ -f "/${FILENAME}" ] && [ "${SHALAYER}" == "$(cat /${FILENAME})" ]; then
-    echo "[mod-init] ${DOCKER_MOD} at ${SHALAYER} has been previously applied skipping"
+    --http1.1 \
+    ${DOCKER_MODS_ALLOW_INSECURE:+--insecure} \
+    ${bearer_token:+--header} ${bearer_token:+Authorization: Bearer $bearer_token} \
+    "$url"
+}
+
+# Use different filtering depending on URL
+get_blob_sha () {
+  echo $(get_url "$1" "$2") | jq -r '.fsLayers[0].blobSum,.layers[0].digest | select(. | .!=null and .!="")'
+}
+
+get_auth_token () {  
+  echo $(get_url "$1") | jq -r '.token'
+}
+
+apply_image_layer () {
+  local url="$1"
+  local bearer_token="$2"
+
+  curl \
+    --silent \
+    --location \
+    --request GET \
+    --http1.1 \
+    ${DOCKER_MODS_ALLOW_INSECURE:+--insecure} \
+    ${bearer_token:+--header} ${bearer_token:+Authorization: Bearer $bearer_token} \
+    "$url" | tar xz -C ${3:-/}
+}
+
+handle_blacklist () {
+  # Kill off modification logic if any of the usernames are banned
+  BLACKLIST=$(get_url "https://raw.githubusercontent.com/linuxserver/docker-mods/master/blacklist.txt")
+  IFS=$'\n'
+  BLACKLIST=(${BLACKLIST})
+  for BANNED in "${BLACKLIST[@]}"; do
+    if [ "${BANNED}" == "${1,,}" ]; then
+      if [ -z ${RUN_BANNED_MODS+x} ]; then
+        write_log "${2} is banned from use due to reported abuse aborting mod logic"
+        exit 0
+      else
+        write_log "You have chosen to run banned mods ${2} will be applied"
+      fi
+    fi
+  done
+}
+
+# Main run logic
+write_log "Attempting to run Docker Modification Logic"
+IFS='|'
+DOCKER_MODS=(${DOCKER_MODS})
+for DOCKER_MOD in "${DOCKER_MODS[@]}"; do
+  write_log "Processing Request for mod '$DOCKER_MOD'"
+
+  # Support alternative endpoints
+  if [[ ${DOCKER_MOD} =~ .*/.*/.* ]] ; then
+    write_log "Found registry url in mod name"
+    DOCKER_MOD_REGISTRY=${DOCKER_MOD%%/*}
+    DOCKER_MOD=${DOCKER_MOD#*/}
+  fi
+
+  IMAGE_ENDPOINT="${DOCKER_MOD%%:*}"
+  IMAGE_USERNAME="${DOCKER_MOD%%/*}"
+  IMAGE_REPO="${IMAGE_ENDPOINT#*/}"
+  IMAGE_TAG="${DOCKER_MOD#*:}"
+  if [[ ${IMAGE_TAG} == "${DOCKER_MOD}" ]]; then
+    IMAGE_TAG="latest"
+  fi
+  SHACACHE_FILENAME="${IMAGE_USERNAME}.${IMAGE_REPO}.${IMAGE_TAG}"
+  
+  REGISTRY_AUTH_SERVICE="registry.docker.io"
+    
+  if [[ ${DOCKER_MOD_REGISTRY} == ghcr.io/* ]] ||  [[ ${DOCKER_MOD} == linuxserver/* ]]; then
+    REGISTRY_AUTH_URL_BASE="https://ghcr.io/token"
+    REGISTRY_URL_BASE="https://ghcr.io/v2"
+  elif [[ ! -z "${DOCKER_MOD_REGISTRY}" ]]; then
+    REGISTRY_AUTH_URL_BASE="https://${DOCKER_MOD_REGISTRY}/service/token"
+    REGISTRY_URL_BASE="https://${DOCKER_MOD_REGISTRY}/v2"
+
+    # Need a better way to handle this
+    [[ ${DOCKER_MOD_REGISTRY} == *"harbor"* && -z ${DOCKER_MOD_REGISTRY_AUTH_SERVICE} ]] && REGISTRY_AUTH_SERVICE="harbor-registry" || REGISTRY_AUTH_SERVICE=$DOCKER_MOD_REGISTRY
   else
-    # Download and extract layer to /
-    curl \
-      --silent \
-      --location \
-      --request GET \
-      --header "Authorization: Bearer ${TOKEN}" \
-      "https://registry-1.docker.io/v2/${ENDPOINT}/blobs/${SHALAYER}" \
-      | tar xz -C /
-    echo ${SHALAYER} > "/${FILENAME}"
+    REGISTRY_AUTH_URL_BASE="https://auth.docker.io/token"
+    REGISTRY_URL_BASE="https://registry-1.docker.io/v2"
+
+    REGISTRY_AUTH_QSP_SERVICE="service=registry.docker.io&"
+  fi
+
+  REGISTRY_AUTH_URL="${REGISTRY_AUTH_URL_BASE}?service=$REGISTRY_AUTH_SERVICE&scope=repository:${IMAGE_ENDPOINT}:pull"
+  REGISTRY_MANIFEST_URL="${REGISTRY_URL_BASE}/${IMAGE_ENDPOINT}/manifests/${IMAGE_TAG}"
+  REGISTRY_BLOB_URL="${REGISTRY_URL_BASE}/${IMAGE_ENDPOINT}/blobs/"
+
+  write_debug "Auth URL    : $REGISTRY_AUTH_URL"
+  write_debug "Manifest URL: $REGISTRY_MANIFEST_URL"
+  write_debug "Blobl URL   : $REGISTRY_BLOB_URL"
+
+  write_log "Checking Blacklist"
+  handle_blacklist "${IMAGE_USERNAME}" "${DOCKER_MOD}"
+
+  write_log "Getting Authentication Token"
+  # Get Registry token for api operations
+  REGISTRY_AUTH_TOKEN=$(get_auth_token "${REGISTRY_AUTH_URL}")
+  # Determine first and only layer of image
+  if [[ -z ${REGISTRY_AUTH_TOKEN} ]]; then  
+    write_log "Unable to request auth token. "
+  else
+    write_log "Getting image layer information"
+    SHALAYER=$(get_blob_sha "${REGISTRY_MANIFEST_URL}" "${REGISTRY_AUTH_TOKEN}")
+    if [[ -z ${SHALAYER} ]]; then
+      write_log "Unable to request image layer information. "
+    else
+      # Check if we have allready applied this layer
+      if [ -f "/${SHACACHE_FILENAME}" ] && [ "${SHALAYER}" == "$(cat /${SHACACHE_FILENAME})" ]; then
+        write_log "${DOCKER_MOD} at ${SHALAYER} has been previously applied skipping"
+      else
+        write_log "Applying ${DOCKER_MOD} files to container"
+        apply_image_layer "${REGISTRY_BLOB_URL}${SHALAYER}" "${REGISTRY_AUTH_TOKEN}" "/"
+        echo ${SHALAYER} > "/${SHACACHE_FILENAME}"
+      fi
+    fi
   fi
 done
