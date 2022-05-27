@@ -107,7 +107,6 @@ RUN \
   apt-get install -y \
     curl \
     gnupg \
-    patch \
     tzdata && \
   echo "**** generate locale ****" && \
   locale-gen en_US.UTF-8 && \
@@ -119,7 +118,6 @@ RUN \
     /config \
     /defaults && \
   echo "**** cleanup ****" && \
-  apt-get remove -y patch && \
   apt-get autoremove && \
   apt-get clean && \
   rm -rf \
