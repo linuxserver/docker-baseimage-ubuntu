@@ -59,7 +59,8 @@ ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/root" \
 LANGUAGE="en_US.UTF-8" \
 LANG="en_US.UTF-8" \
-TERM="xterm"
+TERM="xterm" \
+S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0"
 
 # copy sources
 COPY sources.list /etc/apt/
