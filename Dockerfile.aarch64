@@ -46,7 +46,7 @@ LANG="en_US.UTF-8" \
 TERM="xterm"
 
 # copy sources
-COPY sources.list.arm /etc/apt/
+COPY sources.list.arm /etc/apt/sources.list
 
 RUN \
  echo "**** Ripped from Ubuntu Docker Logic ****" && \
