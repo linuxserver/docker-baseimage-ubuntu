@@ -64,7 +64,7 @@ TERM="xterm" \
 S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0"
 
 # copy sources
-COPY sources.list.arm /etc/apt/
+COPY sources.list.arm /etc/apt/sources.list
 
 RUN \
   echo "**** Ripped from Ubuntu Docker Logic ****" && \
