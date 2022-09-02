@@ -9,6 +9,10 @@ set_legacy_executable_bits() {
 }
 set_legacy_executable_bits
 
+# Directories
+SERVICES_DIR_OLD="/config/custom-services.d"
+SERVICES_DIR="/custom-services.d"
+
 # Remove all existing custom services before continuing to ensure
 # we aren't running anything the user may have removed
 if [[ -n "$(/bin/ls -A /etc/s6-overlay/s6-rc.d/custom-svc-* 2>/dev/null)" ]]; then
