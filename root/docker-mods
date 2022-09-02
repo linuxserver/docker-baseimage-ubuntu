@@ -22,43 +22,43 @@ fi
 if [[ -z "$(/bin/ls -A ${SERVICES_DIR} 2>/dev/null)" ]] &&
     [[ -z "$(/bin/ls -A ${SERVICES_DIR_OLD} 2>/dev/null)" ]]; then
     echo "[custom-init] no custom services found, skipping..."
-fi
+else
+    # Make sure custom service directory exists and has files in it
+    if [[ -e "${SERVICES_DIR}" ]] && [[ -n "$(/bin/ls -A ${SERVICES_DIR} 2>/dev/null)" ]]; then
+        echo "[custom-init] service files found in ${SERVICES_DIR}"
+        for SERVICE in "${SERVICES_DIR}"/*; do
+            NAME="$(basename "${SERVICE}")"
+            if [[ -f "${SERVICE}" ]]; then
+                echo "[custom-init] ${NAME}: service detected, copying..."
+                mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/
+                cp "${SERVICE}" /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
+                chmod +x /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
+                echo "longrun" >/etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/type
+                touch /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/init-services
+                echo "[custom-init] ${NAME}: copied"
+            elif [[ ! -f "${SERVICE}" ]]; then
+                echo "[custom-init] ${NAME}: is not a file"
+            fi
+        done
+    fi
 
-# Make sure custom service directory exists and has files in it
-if [[ -e "${SERVICES_DIR}" ]] && [[ -n "$(/bin/ls -A ${SERVICES_DIR} 2>/dev/null)" ]]; then
-    echo "[custom-init] service files found in ${SERVICES_DIR}"
-    for SERVICE in "${SERVICES_DIR}"/*; do
-        NAME="$(basename "${SERVICE}")"
-        if [[ -f "${SERVICE}" ]]; then
-            echo "[custom-init] ${NAME}: service detected, copying..."
-            mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/
-            cp "${SERVICE}" /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
-            chmod +x /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
-            echo "longrun" >/etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/type
-            touch /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/init-services
-            echo "[custom-init] ${NAME}: copied"
-        elif [[ ! -f "${SERVICE}" ]]; then
-            echo "[custom-init] ${NAME}: is not a file"
-        fi
-    done
-fi
-
-if [[ -e "${SERVICES_DIR_OLD}" ]] && [[ -n "$(/bin/ls -A ${SERVICES_DIR_OLD} 2>/dev/null)" ]]; then
-    echo "[custom-init] service files found in ${SERVICES_DIR_OLD}"
-    for SERVICE in "${SERVICES_DIR_OLD}"/*; do
-        NAME="$(basename "${SERVICE}")"
-        if [[ -f "${SERVICE}" ]]; then
-            echo "[custom-init] ${NAME}: service detected, copying..."
-            mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/
-            cp "${SERVICE}" /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
-            chmod +x /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
-            echo "longrun" >/etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/type
-            touch /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/init-services
-            echo "[custom-init] ${NAME}: copied"
-        elif [[ ! -f "${SERVICE}" ]]; then
-            echo "[custom-init] ${NAME}: is not a file"
-        fi
-    done
+    if [[ -e "${SERVICES_DIR_OLD}" ]] && [[ -n "$(/bin/ls -A ${SERVICES_DIR_OLD} 2>/dev/null)" ]]; then
+        echo "[custom-init] service files found in ${SERVICES_DIR_OLD}"
+        for SERVICE in "${SERVICES_DIR_OLD}"/*; do
+            NAME="$(basename "${SERVICE}")"
+            if [[ -f "${SERVICE}" ]]; then
+                echo "[custom-init] ${NAME}: service detected, copying..."
+                mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/
+                cp "${SERVICE}" /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
+                chmod +x /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
+                echo "longrun" >/etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/type
+                touch /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/init-services
+                echo "[custom-init] ${NAME}: copied"
+            elif [[ ! -f "${SERVICE}" ]]; then
+                echo "[custom-init] ${NAME}: is not a file"
+            fi
+        done
+    fi
 fi
 
 # Exit if mods is not set
@@ -70,7 +70,7 @@ fi
 if [ ! -f /usr/bin/curl ] || [ ! -f /usr/bin/jq ]; then
   echo "[mod-init] Curl/JQ was not found on this system for Docker mods installing"
   if [ -f /usr/bin/apt ]; then
-    ## Ubuntu
+    # Ubuntu
     apt-get update
     apt-get install --no-install-recommends -y \
       curl \
