@@ -25,7 +25,7 @@ else
             NAME="$(basename "${SERVICE}")"
             if [[ -f "${SERVICE}" ]]; then
                 echo "[custom-init] ${NAME}: service detected, copying..."
-                mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/
+                mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/
                 cp "${SERVICE}" /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
                 chmod +x /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
                 echo "longrun" >/etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/type
@@ -44,7 +44,7 @@ else
             NAME="$(basename "${SERVICE}")"
             if [[ -f "${SERVICE}" ]]; then
                 echo "[custom-init] ${NAME}: service detected, copying..."
-                mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/
+                mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d/
                 cp "${SERVICE}" /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
                 chmod +x /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
                 echo "longrun" >/etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/type
