@@ -32,7 +32,7 @@ if [[ -e "${SERVICES_DIR}" ]] && [[ -n "$(/bin/ls -A ${SERVICES_DIR} 2>/dev/null
         NAME="$(basename "${SERVICE}")"
         if [[ -f "${SERVICE}" ]]; then
             echo "[custom-init] ${NAME}: service detected, copying..."
-            mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/
+            mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d
             cp "${SERVICE}" /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
             chmod +x /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
             echo "longrun" >/etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/type
@@ -51,7 +51,7 @@ if [[ -e "${SERVICES_DIR_OLD}" ]] && [[ -n "$(/bin/ls -A ${SERVICES_DIR_OLD} 2>/
         NAME="$(basename "${SERVICE}")"
         if [[ -f "${SERVICE}" ]]; then
             echo "[custom-init] ${NAME}: service detected, copying..."
-            mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/
+            mkdir -p /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/dependencies.d
             cp "${SERVICE}" /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
             chmod +x /etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/run
             echo "longrun" >/etc/s6-overlay/s6-rc.d/custom-svc-"${NAME}"/type
