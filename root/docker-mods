@@ -272,9 +272,6 @@ else
     process_custom_services
 fi
 
-# Process any custom services
-process_custom_services
-
 # Run mod logic
 if [[ -n "${DOCKER_MODS+x}" ]]; then
     curl_check
