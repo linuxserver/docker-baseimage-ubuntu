@@ -1,6 +1,11 @@
 #!/usr/bin/with-contenv bash
 # shellcheck shell=bash
 
+SCRIPTS_DIR_OLD="/config/custom-cont-init.d"
+SCRIPTS_DIR="/custom-cont-init.d"
+SERVICES_DIR_OLD="/config/custom-services.d"
+SERVICES_DIR="/custom-services.d"
+
 # Set executable bit on cont-init and services built into the image
 set_legacy_executable_bits() {
     mkdir -p /etc/{cont-init.d,services.d}
@@ -31,7 +36,7 @@ tamper_check() {
 tamper_check_legacy() {
     # Tamper check custom script locations
     if [[ -d "${SCRIPTS_DIR_OLD}" ]] && [[ -n "$(find ${SCRIPTS_DIR_OLD} ! -user root)" ]]; then
-        echo "**** Potential tampering with custom scripts detected ****"
+        echo "[custom-init] **** Potential tampering with custom scripts detected ****"
         randstr=$(
             tr </dev/urandom -dc _A-Z-a-z-0-9 | head -c8
             echo
@@ -263,11 +268,6 @@ run_mods() {
 }
 
 # Main script loop
-
-SCRIPTS_DIR_OLD="/config/custom-cont-init.d"
-SCRIPTS_DIR="/custom-cont-init.d"
-SERVICES_DIR_OLD="/config/custom-services.d"
-SERVICES_DIR="/custom-services.d"
 
 if [ ! -d "/custom-cont-init.d" ] && [ ! -d "/custom-services.d" ]; then
     # Tamper check legacy custom folders

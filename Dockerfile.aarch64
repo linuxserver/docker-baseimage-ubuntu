@@ -9,7 +9,6 @@ RUN \
   apk add --no-cache \
     bash \
     curl \
-    patch \
     tar \
     tzdata \
     xz
@@ -25,7 +24,7 @@ RUN \
     /root-out
 
 # set version for s6 overlay
-ARG S6_OVERLAY_VERSION="3.1.0.1"
+ARG S6_OVERLAY_VERSION="3.1.2.1"
 ARG S6_OVERLAY_ARCH="aarch64"
 
 # add s6 overlay
@@ -39,13 +38,6 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLA
 RUN tar -C /root-out -Jxpf /tmp/s6-overlay-symlinks-noarch.tar.xz
 ADD https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-symlinks-arch.tar.xz /tmp
 RUN tar -C /root-out -Jxpf /tmp/s6-overlay-symlinks-arch.tar.xz
-
-# copy ci-checks
-COPY ci-check/ /root-out/package/admin/s6-overlay-${S6_OVERLAY_VERSION}/etc/s6-rc/sources/top/contents.d
-
-# patch cont-init for docker-mods
-COPY patch/ /tmp/patch
-RUN  patch -u /root-out/package/admin/s6-overlay-${S6_OVERLAY_VERSION}/etc/s6-linux-init/skel/rc.init -i /tmp/patch/package/admin/s6-overlay-@VERSION@/etc/s6-linux-init/skel/rc.init.patch
 
 # Runtime stage
 FROM scratch
@@ -61,7 +53,9 @@ ENV HOME="/root" \
 LANGUAGE="en_US.UTF-8" \
 LANG="en_US.UTF-8" \
 TERM="xterm" \
-S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0"
+S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0" \
+S6_VERBOSITY=1 \
+S6_STAGE2_HOOK=/docker-mods
 
 # copy sources
 COPY sources.list.arm /etc/apt/sources.list
