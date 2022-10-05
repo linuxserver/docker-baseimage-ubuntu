@@ -44,8 +44,11 @@ FROM scratch
 COPY --from=rootfs-stage /root-out/ /
 ARG BUILD_DATE
 ARG VERSION
+ARG MODS_VERSION="v3"
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="TheLamer"
+
+ADD "https://raw.githubusercontent.com/linuxserver/docker-mods/mod-scripts/docker-mods.${MODS_VERSION}" "/docker-mods"
 
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
@@ -102,6 +105,8 @@ RUN \
   apt-get install -y \
     curl \
     gnupg \
+    jq \
+    netcat \
     tzdata && \
   echo "**** generate locale ****" && \
   locale-gen en_US.UTF-8 && \
@@ -112,6 +117,7 @@ RUN \
     /app \
     /config \
     /defaults && \
+  chmod +x /docker-mods && \
   echo "**** add qemu ****" && \
   curl -o \
   /usr/bin/qemu-aarch64-static -L \
