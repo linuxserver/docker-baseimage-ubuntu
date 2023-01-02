@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM alpine:3.15 as rootfs-stage
+FROM alpine:3.17 as rootfs-stage
 
 # environment
 ENV REL=jammy
@@ -11,7 +11,6 @@ RUN \
   apk add --no-cache \
     bash \
     curl \
-    tar \
     tzdata \
     xz
 
@@ -23,7 +22,9 @@ RUN \
     https://partner-images.canonical.com/core/${REL}/current/ubuntu-${REL}-core-cloudimg-${ARCH}-root.tar.gz && \
   tar xf \
     /rootfs.tar.gz -C \
-    /root-out
+    /root-out && \
+  rm -rf \
+    /root-out/var/log/*
 
 # set version for s6 overlay
 ARG S6_OVERLAY_VERSION="3.1.2.1"
