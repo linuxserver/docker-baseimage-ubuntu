@@ -1,123 +1,124 @@
-adduser3.116ubuntu1
-apt1.6.14
-apt-utils1.6.14
-base-files10.1ubuntu2.11
-base-passwd3.5.44
-bash4.4.18-2ubuntu1.2
-bsdutils1:2.31.1-0.4ubuntu3.7
-bzip21.0.6-8.1ubuntu0.2
-ca-certificates20211016ubuntu0.18.04.1
-coreutils8.28-1ubuntu1
-curl7.58.0-2ubuntu3.23
-dash0.5.8-2.10
-debconf1.5.66ubuntu1
-debianutils4.8.4
-diffutils1:3.6-1
-dpkg1.19.0.5ubuntu2.3
-e2fsprogs1.44.1-1ubuntu1.3
-fdisk2.31.1-0.4ubuntu3.7
-findutils4.6.0+git+20170828-2
-gcc-8-base8.4.0-1ubuntu1~18.04
-gpgv2.2.4-1ubuntu1.4
-grep3.1-2build1
-gzip1.6-5ubuntu1.1
-hostname3.20
-init-system-helpers1.51
-krb5-locales1.16-2ubuntu0.3
-libacl12.2.52-3build1
-libapt-inst2.01.6.14
-libapt-pkg5.01.6.14
-libasn1-8-heimdal7.5.0+dfsg-1ubuntu0.4
-libattr11:2.4.47-2build1
-libaudit11:2.8.2-1ubuntu1.1
-libaudit-common1:2.8.2-1ubuntu1.1
-libblkid12.31.1-0.4ubuntu3.7
-libbz2-1.01.0.6-8.1ubuntu0.2
-libc62.27-3ubuntu1.5
-libcap-ng00.7.7-3.1
-libc-bin2.27-3ubuntu1.5
-libcom-err21.44.1-1ubuntu1.3
-libcurl47.58.0-2ubuntu3.23
-libdb5.35.3.28-13.1ubuntu1.1
-libdebconfclient00.213ubuntu1
-libext2fs21.44.1-1ubuntu1.3
-libfdisk12.31.1-0.4ubuntu3.7
-libffi63.2.1-8
-libgcc11:8.4.0-1ubuntu1~18.04
-libgcrypt201.8.1-4ubuntu1.3
-libgmp102:6.1.2+dfsg-2
-libgnutls303.5.18-1ubuntu1.5
-libgpg-error01.27-6
-libgssapi3-heimdal7.5.0+dfsg-1ubuntu0.4
-libgssapi-krb5-21.16-2ubuntu0.3
-libhcrypto4-heimdal7.5.0+dfsg-1ubuntu0.4
-libheimbase1-heimdal7.5.0+dfsg-1ubuntu0.4
-libheimntlm0-heimdal7.5.0+dfsg-1ubuntu0.4
-libhogweed43.4.1-0ubuntu0.18.04.1
-libhx509-5-heimdal7.5.0+dfsg-1ubuntu0.4
-libidn2-02.0.4-1.1ubuntu0.2
-libk5crypto31.16-2ubuntu0.3
-libkeyutils11.5.9-9.2ubuntu2.1
-libkrb5-26-heimdal7.5.0+dfsg-1ubuntu0.4
-libkrb5-31.16-2ubuntu0.3
-libkrb5support01.16-2ubuntu0.3
-libldap-2.4-22.4.45+dfsg-1ubuntu1.11
-libldap-common2.4.45+dfsg-1ubuntu1.11
-liblz4-10.0~r131-2ubuntu3.1
-liblzma55.2.2-1.3
-libmount12.31.1-0.4ubuntu3.7
-libncurses56.1-1ubuntu1.18.04
-libncursesw56.1-1ubuntu1.18.04
-libnettle63.4.1-0ubuntu0.18.04.1
-libnghttp2-141.30.0-1ubuntu1
-libp11-kit00.23.9-2ubuntu0.1
-libpam0g1.1.8-3.6ubuntu2.18.04.3
-libpam-modules1.1.8-3.6ubuntu2.18.04.3
-libpam-modules-bin1.1.8-3.6ubuntu2.18.04.3
-libpam-runtime1.1.8-3.6ubuntu2.18.04.3
-libpcre32:8.39-9
-libprocps62:3.3.12-3ubuntu1.2
-libpsl50.19.1-5build1
-libroken18-heimdal7.5.0+dfsg-1ubuntu0.4
-librtmp12.4+20151223.gitfa8646d.1-1
-libsasl2-22.1.27~101-g0780600+dfsg-3ubuntu2.4
-libsasl2-modules2.1.27~101-g0780600+dfsg-3ubuntu2.4
-libsasl2-modules-db2.1.27~101-g0780600+dfsg-3ubuntu2.4
-libseccomp22.5.1-1ubuntu1~18.04.2
-libselinux12.7-2build2
-libsemanage12.7-2build2
-libsemanage-common2.7-2build2
-libsepol12.7-1
-libsmartcols12.31.1-0.4ubuntu3.7
-libsqlite3-03.22.0-1ubuntu0.7
-libss21.44.1-1ubuntu1.3
-libssl1.11.1.1-1ubuntu2.1~18.04.21
-libstdc++68.4.0-1ubuntu1~18.04
-libsystemd0237-3ubuntu10.53
-libtasn1-64.13-2
-libtinfo56.1-1ubuntu1.18.04
-libudev1237-3ubuntu10.53
-libunistring20.9.9-0ubuntu2
-libuuid12.31.1-0.4ubuntu3.7
-libwind0-heimdal7.5.0+dfsg-1ubuntu0.4
-libzstd11.3.3+dfsg-2ubuntu1.2
-locales2.27-3ubuntu1.6
-login1:4.5-1ubuntu2.2
-lsb-base9.20170808ubuntu1
-mawk1.3.3-17ubuntu3
-mount2.31.1-0.4ubuntu3.7
-ncurses-base6.1-1ubuntu1.18.04
-ncurses-bin6.1-1ubuntu1.18.04
-openssl1.1.1-1ubuntu2.1~18.04.21
-passwd1:4.5-1ubuntu2.2
-perl-base5.26.1-6ubuntu0.5
-procps2:3.3.12-3ubuntu1.2
-publicsuffix20180223.1310-1
-sed4.4-2
-sensible-utils0.0.12
-sysvinit-utils2.88dsf-59.10ubuntu1
-tar1.29b-2ubuntu0.3
-tzdata2022g-0ubuntu0.18.04
-ubuntu-keyring2018.09.18.1~18.04.2
-util-linux2.31.1-0.4ubuntu3.7
-zlib1g1:1.2.11.dfsg-0ubuntu2
+NAME                  VERSION                              TYPE 
+adduser               3.116ubuntu1                         deb   
+apt                   1.6.14                               deb   
+apt-utils             1.6.14                               deb   
+base-files            10.1ubuntu2.11                       deb   
+base-passwd           3.5.44                               deb   
+bash                  4.4.18-2ubuntu1.2                    deb   
+bsdutils              1:2.31.1-0.4ubuntu3.7                deb   
+bzip2                 1.0.6-8.1ubuntu0.2                   deb   
+ca-certificates       20211016ubuntu0.18.04.1              deb   
+coreutils             8.28-1ubuntu1                        deb   
+curl                  7.58.0-2ubuntu3.23                   deb   
+dash                  0.5.8-2.10                           deb   
+debconf               1.5.66ubuntu1                        deb   
+debianutils           4.8.4                                deb   
+diffutils             1:3.6-1                              deb   
+dpkg                  1.19.0.5ubuntu2.3                    deb   
+e2fsprogs             1.44.1-1ubuntu1.3                    deb   
+fdisk                 2.31.1-0.4ubuntu3.7                  deb   
+findutils             4.6.0+git+20170828-2                 deb   
+gcc-8-base            8.4.0-1ubuntu1~18.04                 deb   
+gpgv                  2.2.4-1ubuntu1.4                     deb   
+grep                  3.1-2build1                          deb   
+gzip                  1.6-5ubuntu1.1                       deb   
+hostname              3.20                                 deb   
+init-system-helpers   1.51                                 deb   
+krb5-locales          1.16-2ubuntu0.3                      deb   
+libacl1               2.2.52-3build1                       deb   
+libapt-inst2.0        1.6.14                               deb   
+libapt-pkg5.0         1.6.14                               deb   
+libasn1-8-heimdal     7.5.0+dfsg-1ubuntu0.4                deb   
+libattr1              1:2.4.47-2build1                     deb   
+libaudit-common       1:2.8.2-1ubuntu1.1                   deb   
+libaudit1             1:2.8.2-1ubuntu1.1                   deb   
+libblkid1             2.31.1-0.4ubuntu3.7                  deb   
+libbz2-1.0            1.0.6-8.1ubuntu0.2                   deb   
+libc-bin              2.27-3ubuntu1.5                      deb   
+libc6                 2.27-3ubuntu1.5                      deb   
+libcap-ng0            0.7.7-3.1                            deb   
+libcom-err2           1.44.1-1ubuntu1.3                    deb   
+libcurl4              7.58.0-2ubuntu3.23                   deb   
+libdb5.3              5.3.28-13.1ubuntu1.1                 deb   
+libdebconfclient0     0.213ubuntu1                         deb   
+libext2fs2            1.44.1-1ubuntu1.3                    deb   
+libfdisk1             2.31.1-0.4ubuntu3.7                  deb   
+libffi6               3.2.1-8                              deb   
+libgcc1               1:8.4.0-1ubuntu1~18.04               deb   
+libgcrypt20           1.8.1-4ubuntu1.3                     deb   
+libgmp10              2:6.1.2+dfsg-2                       deb   
+libgnutls30           3.5.18-1ubuntu1.5                    deb   
+libgpg-error0         1.27-6                               deb   
+libgssapi-krb5-2      1.16-2ubuntu0.3                      deb   
+libgssapi3-heimdal    7.5.0+dfsg-1ubuntu0.4                deb   
+libhcrypto4-heimdal   7.5.0+dfsg-1ubuntu0.4                deb   
+libheimbase1-heimdal  7.5.0+dfsg-1ubuntu0.4                deb   
+libheimntlm0-heimdal  7.5.0+dfsg-1ubuntu0.4                deb   
+libhogweed4           3.4.1-0ubuntu0.18.04.1               deb   
+libhx509-5-heimdal    7.5.0+dfsg-1ubuntu0.4                deb   
+libidn2-0             2.0.4-1.1ubuntu0.2                   deb   
+libk5crypto3          1.16-2ubuntu0.3                      deb   
+libkeyutils1          1.5.9-9.2ubuntu2.1                   deb   
+libkrb5-26-heimdal    7.5.0+dfsg-1ubuntu0.4                deb   
+libkrb5-3             1.16-2ubuntu0.3                      deb   
+libkrb5support0       1.16-2ubuntu0.3                      deb   
+libldap-2.4-2         2.4.45+dfsg-1ubuntu1.11              deb   
+libldap-common        2.4.45+dfsg-1ubuntu1.11              deb   
+liblz4-1              0.0~r131-2ubuntu3.1                  deb   
+liblzma5              5.2.2-1.3                            deb   
+libmount1             2.31.1-0.4ubuntu3.7                  deb   
+libncurses5           6.1-1ubuntu1.18.04                   deb   
+libncursesw5          6.1-1ubuntu1.18.04                   deb   
+libnettle6            3.4.1-0ubuntu0.18.04.1               deb   
+libnghttp2-14         1.30.0-1ubuntu1                      deb   
+libp11-kit0           0.23.9-2ubuntu0.1                    deb   
+libpam-modules        1.1.8-3.6ubuntu2.18.04.3             deb   
+libpam-modules-bin    1.1.8-3.6ubuntu2.18.04.3             deb   
+libpam-runtime        1.1.8-3.6ubuntu2.18.04.3             deb   
+libpam0g              1.1.8-3.6ubuntu2.18.04.3             deb   
+libpcre3              2:8.39-9                             deb   
+libprocps6            2:3.3.12-3ubuntu1.2                  deb   
+libpsl5               0.19.1-5build1                       deb   
+libroken18-heimdal    7.5.0+dfsg-1ubuntu0.4                deb   
+librtmp1              2.4+20151223.gitfa8646d.1-1          deb   
+libsasl2-2            2.1.27~101-g0780600+dfsg-3ubuntu2.4  deb   
+libsasl2-modules      2.1.27~101-g0780600+dfsg-3ubuntu2.4  deb   
+libsasl2-modules-db   2.1.27~101-g0780600+dfsg-3ubuntu2.4  deb   
+libseccomp2           2.5.1-1ubuntu1~18.04.2               deb   
+libselinux1           2.7-2build2                          deb   
+libsemanage-common    2.7-2build2                          deb   
+libsemanage1          2.7-2build2                          deb   
+libsepol1             2.7-1                                deb   
+libsmartcols1         2.31.1-0.4ubuntu3.7                  deb   
+libsqlite3-0          3.22.0-1ubuntu0.7                    deb   
+libss2                1.44.1-1ubuntu1.3                    deb   
+libssl1.1             1.1.1-1ubuntu2.1~18.04.21            deb   
+libstdc++6            8.4.0-1ubuntu1~18.04                 deb   
+libsystemd0           237-3ubuntu10.53                     deb   
+libtasn1-6            4.13-2                               deb   
+libtinfo5             6.1-1ubuntu1.18.04                   deb   
+libudev1              237-3ubuntu10.53                     deb   
+libunistring2         0.9.9-0ubuntu2                       deb   
+libuuid1              2.31.1-0.4ubuntu3.7                  deb   
+libwind0-heimdal      7.5.0+dfsg-1ubuntu0.4                deb   
+libzstd1              1.3.3+dfsg-2ubuntu1.2                deb   
+locales               2.27-3ubuntu1.6                      deb   
+login                 1:4.5-1ubuntu2.2                     deb   
+lsb-base              9.20170808ubuntu1                    deb   
+mawk                  1.3.3-17ubuntu3                      deb   
+mount                 2.31.1-0.4ubuntu3.7                  deb   
+ncurses-base          6.1-1ubuntu1.18.04                   deb   
+ncurses-bin           6.1-1ubuntu1.18.04                   deb   
+openssl               1.1.1-1ubuntu2.1~18.04.21            deb   
+passwd                1:4.5-1ubuntu2.2                     deb   
+perl-base             5.26.1-6ubuntu0.5                    deb   
+procps                2:3.3.12-3ubuntu1.2                  deb   
+publicsuffix          20180223.1310-1                      deb   
+sed                   4.4-2                                deb   
+sensible-utils        0.0.12                               deb   
+sysvinit-utils        2.88dsf-59.10ubuntu1                 deb   
+tar                   1.29b-2ubuntu0.3                     deb   
+tzdata                2022g-0ubuntu0.18.04                 deb   
+ubuntu-keyring        2018.09.18.1~18.04.2                 deb   
+util-linux            2.31.1-0.4ubuntu3.7                  deb   
+zlib1g                1:1.2.11.dfsg-0ubuntu2               deb   
