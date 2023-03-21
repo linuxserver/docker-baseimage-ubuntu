@@ -9,7 +9,7 @@ bsdutils              1:2.31.1-0.4ubuntu3.7                deb
 bzip2                 1.0.6-8.1ubuntu0.2                   deb   
 ca-certificates       20211016ubuntu0.18.04.1              deb   
 coreutils             8.28-1ubuntu1                        deb   
-curl                  7.58.0-2ubuntu3.23                   deb   
+curl                  7.58.0-2ubuntu3.24                   deb   
 dash                  0.5.8-2.10                           deb   
 debconf               1.5.66ubuntu1                        deb   
 debianutils           4.8.4                                deb   
@@ -24,7 +24,7 @@ grep                  3.1-2build1                          deb
 gzip                  1.6-5ubuntu1.1                       deb   
 hostname              3.20                                 deb   
 init-system-helpers   1.51                                 deb   
-krb5-locales          1.16-2ubuntu0.3                      deb   
+krb5-locales          1.16-2ubuntu0.4                      deb   
 libacl1               2.2.52-3build1                       deb   
 libapt-inst2.0        1.6.14                               deb   
 libapt-pkg5.0         1.6.14                               deb   
@@ -38,7 +38,7 @@ libc-bin              2.27-3ubuntu1.5                      deb
 libc6                 2.27-3ubuntu1.5                      deb   
 libcap-ng0            0.7.7-3.1                            deb   
 libcom-err2           1.44.1-1ubuntu1.3                    deb   
-libcurl4              7.58.0-2ubuntu3.23                   deb   
+libcurl4              7.58.0-2ubuntu3.24                   deb   
 libdb5.3              5.3.28-13.1ubuntu1.1                 deb   
 libdebconfclient0     0.213ubuntu1                         deb   
 libext2fs2            1.44.1-1ubuntu1.3                    deb   
@@ -49,7 +49,7 @@ libgcrypt20           1.8.1-4ubuntu1.3                     deb
 libgmp10              2:6.1.2+dfsg-2                       deb   
 libgnutls30           3.5.18-1ubuntu1.5                    deb   
 libgpg-error0         1.27-6                               deb   
-libgssapi-krb5-2      1.16-2ubuntu0.3                      deb   
+libgssapi-krb5-2      1.16-2ubuntu0.4                      deb   
 libgssapi3-heimdal    7.5.0+dfsg-1ubuntu0.4                deb   
 libhcrypto4-heimdal   7.5.0+dfsg-1ubuntu0.4                deb   
 libheimbase1-heimdal  7.5.0+dfsg-1ubuntu0.4                deb   
@@ -57,11 +57,11 @@ libheimntlm0-heimdal  7.5.0+dfsg-1ubuntu0.4                deb
 libhogweed4           3.4.1-0ubuntu0.18.04.1               deb   
 libhx509-5-heimdal    7.5.0+dfsg-1ubuntu0.4                deb   
 libidn2-0             2.0.4-1.1ubuntu0.2                   deb   
-libk5crypto3          1.16-2ubuntu0.3                      deb   
+libk5crypto3          1.16-2ubuntu0.4                      deb   
 libkeyutils1          1.5.9-9.2ubuntu2.1                   deb   
 libkrb5-26-heimdal    7.5.0+dfsg-1ubuntu0.4                deb   
-libkrb5-3             1.16-2ubuntu0.3                      deb   
-libkrb5support0       1.16-2ubuntu0.3                      deb   
+libkrb5-3             1.16-2ubuntu0.4                      deb   
+libkrb5support0       1.16-2ubuntu0.4                      deb   
 libldap-2.4-2         2.4.45+dfsg-1ubuntu1.11              deb   
 libldap-common        2.4.45+dfsg-1ubuntu1.11              deb   
 liblz4-1              0.0~r131-2ubuntu3.1                  deb   
