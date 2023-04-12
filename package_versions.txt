@@ -144,7 +144,7 @@ sed                   4.7-1                              deb
 sensible-utils        0.0.12+nmu1                        deb   
 sysvinit-utils        2.96-2.1ubuntu1                    deb   
 tar                   1.30+dfsg-7ubuntu0.20.04.2         deb   
-tzdata                2022g-0ubuntu0.20.04.1             deb   
+tzdata                2023c-0ubuntu0.20.04.0             deb   
 ubuntu-keyring        2020.02.11.4                       deb   
 util-linux            2.34-0.1ubuntu9.3                  deb   
 zlib1g                1:1.2.11.dfsg-2ubuntu1.2           deb   
