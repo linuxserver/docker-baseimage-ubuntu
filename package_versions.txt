@@ -1,7 +1,7 @@
 NAME                  VERSION                              TYPE 
 adduser               3.116ubuntu1                         deb   
-apt                   1.6.14                               deb   
-apt-utils             1.6.14                               deb   
+apt                   1.6.17                               deb   
+apt-utils             1.6.17                               deb   
 base-files            10.1ubuntu2.11                       deb   
 base-passwd           3.5.44                               deb   
 bash                  4.4.18-2ubuntu1.2                    deb   
@@ -26,8 +26,8 @@ hostname              3.20                                 deb
 init-system-helpers   1.51                                 deb   
 krb5-locales          1.16-2ubuntu0.4                      deb   
 libacl1               2.2.52-3build1                       deb   
-libapt-inst2.0        1.6.14                               deb   
-libapt-pkg5.0         1.6.14                               deb   
+libapt-inst2.0        1.6.17                               deb   
+libapt-pkg5.0         1.6.17                               deb   
 libasn1-8-heimdal     7.5.0+dfsg-1ubuntu0.4                deb   
 libattr1              1:2.4.47-2build1                     deb   
 libaudit-common       1:2.8.2-1ubuntu1.1                   deb   
@@ -118,7 +118,7 @@ sed                   4.4-2                                deb
 sensible-utils        0.0.12                               deb   
 sysvinit-utils        2.88dsf-59.10ubuntu1                 deb   
 tar                   1.29b-2ubuntu0.3                     deb   
-tzdata                2022g-0ubuntu0.18.04                 deb   
+tzdata                2023c-0ubuntu0.18.04                 deb   
 ubuntu-keyring        2018.09.18.1~18.04.2                 deb   
 util-linux            2.31.1-0.4ubuntu3.7                  deb   
 zlib1g                1:1.2.11.dfsg-0ubuntu2               deb   
