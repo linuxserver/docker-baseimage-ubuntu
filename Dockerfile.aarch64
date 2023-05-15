@@ -56,12 +56,14 @@ ADD --chmod=744 "https://raw.githubusercontent.com/linuxserver/docker-mods/mod-s
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/root" \
-LANGUAGE="en_US.UTF-8" \
-LANG="en_US.UTF-8" \
-TERM="xterm" \
-S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0" \
-S6_VERBOSITY=1 \
-S6_STAGE2_HOOK=/docker-mods
+  LANGUAGE="en_US.UTF-8" \
+  LANG="en_US.UTF-8" \
+  TERM="xterm" \
+  S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0" \
+  S6_VERBOSITY=1 \
+  S6_STAGE2_HOOK=/docker-mods \
+  VIRTUAL_ENV=/lsiopy \
+  PATH="/lsiopy/bin:$PATH"
 
 # copy sources
 COPY sources.list.arm /etc/apt/sources.list
@@ -119,7 +121,8 @@ RUN \
   mkdir -p \
     /app \
     /config \
-    /defaults && \
+    /defaults \
+    /lsiopy && \
   echo "**** add qemu ****" && \
   curl -o \
   /usr/bin/qemu-aarch64-static -L \
