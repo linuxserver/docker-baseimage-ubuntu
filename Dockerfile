@@ -27,7 +27,7 @@ RUN \
     /root-out/var/log/*
 
 # set version for s6 overlay
-ARG S6_OVERLAY_VERSION="3.1.2.1"
+ARG S6_OVERLAY_VERSION="3.1.5.0"
 ARG S6_OVERLAY_ARCH="x86_64"
 
 # add s6 overlay
@@ -48,20 +48,24 @@ COPY --from=rootfs-stage /root-out/ /
 ARG BUILD_DATE
 ARG VERSION
 ARG MODS_VERSION="v3"
+ARG PKG_INST_VERSION="v1"
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="TheLamer"
 
 ADD --chmod=744 "https://raw.githubusercontent.com/linuxserver/docker-mods/mod-scripts/docker-mods.${MODS_VERSION}" "/docker-mods"
+ADD --chmod=744 "https://raw.githubusercontent.com/linuxserver/docker-mods/mod-scripts/package-install.${PKG_INST_VERSION}" "/etc/s6-overlay/s6-rc.d/init-mods-package-install/run"
 
 # set environment variables
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV HOME="/root" \
-LANGUAGE="en_US.UTF-8" \
-LANG="en_US.UTF-8" \
-TERM="xterm" \
-S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0" \
-S6_VERBOSITY=1 \
-S6_STAGE2_HOOK=/docker-mods
+  LANGUAGE="en_US.UTF-8" \
+  LANG="en_US.UTF-8" \
+  TERM="xterm" \
+  S6_CMD_WAIT_FOR_SERVICES_MAXTIME="0" \
+  S6_VERBOSITY=1 \
+  S6_STAGE2_HOOK=/docker-mods \
+  VIRTUAL_ENV=/lsiopy \
+  PATH="/lsiopy/bin:$PATH"
 
 # copy sources
 COPY sources.list /etc/apt/
@@ -119,7 +123,8 @@ RUN \
   mkdir -p \
     /app \
     /config \
-    /defaults && \
+    /defaults \
+    /lsiopy && \
   echo "**** cleanup ****" && \
   apt-get autoremove && \
   apt-get clean && \
