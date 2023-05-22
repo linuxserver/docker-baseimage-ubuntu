@@ -117,6 +117,8 @@ RUN \
     /app \
     /config \
     /defaults && \
+  echo "**** patch /docker-mods ****" && \
+  sed -i 's|--retry-all-errors|--retry-connrefused|g' /docker-mods && \
   echo "**** cleanup ****" && \
   apt-get autoremove && \
   apt-get clean && \
