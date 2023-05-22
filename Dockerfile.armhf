@@ -122,6 +122,8 @@ RUN \
     /usr/bin/qemu-arm-static -L \
     "https://lsio-ci.ams3.digitaloceanspaces.com/qemu-arm-static" && \
   chmod +x /usr/bin/qemu-arm-static && \
+  echo "**** patch /docker-mods ****" && \
+  sed -i 's|--retry-all-errors|--retry-connrefused|g' /docker-mods && \
   echo "**** cleanup ****" && \
   apt-get autoremove && \
   apt-get clean && \
