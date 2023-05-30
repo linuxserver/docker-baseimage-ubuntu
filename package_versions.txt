@@ -7,7 +7,7 @@ base-passwd           3.5.47                             deb
 bash                  5.0-6ubuntu1.2                     deb   
 bsdutils              1:2.34-0.1ubuntu9.3                deb   
 bzip2                 1.0.8-2                            deb   
-ca-certificates       20211016ubuntu0.20.04.1            deb   
+ca-certificates       20230311ubuntu0.20.04.1            deb   
 coreutils             8.30-3ubuntu2                      deb   
 curl                  7.68.0-1ubuntu2.18                 deb   
 dash                  0.5.10.2-6                         deb   
@@ -113,7 +113,7 @@ libsmartcols1         2.34-0.1ubuntu9.3                  deb
 libsqlite3-0          3.31.1-4ubuntu0.5                  deb   
 libss2                1.45.5-2ubuntu1.1                  deb   
 libssh-4              0.9.3-2ubuntu2.2                   deb   
-libssl1.1             1.1.1f-1ubuntu2.18                 deb   
+libssl1.1             1.1.1f-1ubuntu2.19                 deb   
 libstdc++6            10.3.0-1ubuntu1~20.04              deb   
 libsystemd0           245.4-4ubuntu3.21                  deb   
 libtasn1-6            4.16.0-2                           deb   
@@ -133,7 +133,7 @@ ncurses-base          6.2-0ubuntu2                       deb
 ncurses-bin           6.2-0ubuntu2                       deb   
 netcat                1.206-1ubuntu1                     deb   
 netcat-openbsd        1.206-1ubuntu1                     deb   
-openssl               1.1.1f-1ubuntu2.18                 deb   
+openssl               1.1.1f-1ubuntu2.19                 deb   
 passwd                1:4.8.1-1ubuntu5.20.04.4           deb   
 perl-base             5.30.0-9ubuntu0.3                  deb   
 pinentry-curses       1.1.0-3build1                      deb   
