@@ -124,7 +124,7 @@ libunistring2         0.9.10-2                           deb
 libuuid1              2.34-0.1ubuntu9.4                  deb     
 libwind0-heimdal      7.7.0+dfsg-1ubuntu1.4              deb     
 libzstd1              1.4.4+dfsg-3ubuntu0.1              deb     
-locales               2.31-0ubuntu9.9                    deb     
+locales               2.31-0ubuntu9.12                   deb     
 login                 1:4.8.1-1ubuntu5.20.04.4           deb     
 logsave               1.45.5-2ubuntu1.1                  deb     
 lsb-base              11.1.0ubuntu2                      deb     
