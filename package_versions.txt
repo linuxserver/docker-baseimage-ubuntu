@@ -114,7 +114,7 @@ libsmartcols1         2.34-0.1ubuntu9.4                  deb
 libsqlite3-0          3.31.1-4ubuntu0.5                  deb     
 libss2                1.45.5-2ubuntu1.1                  deb     
 libssh-4              0.9.3-2ubuntu2.3                   deb     
-libssl1.1             1.1.1f-1ubuntu2.19                 deb     
+libssl1.1             1.1.1f-1ubuntu2.20                 deb     
 libstdc++6            10.3.0-1ubuntu1~20.04              deb     
 libsystemd0           245.4-4ubuntu3.22                  deb     
 libtasn1-6            4.16.0-2                           deb     
@@ -134,7 +134,7 @@ ncurses-base          6.2-0ubuntu2.1                     deb
 ncurses-bin           6.2-0ubuntu2.1                     deb     
 netcat                1.206-1ubuntu1                     deb     
 netcat-openbsd        1.206-1ubuntu1                     deb     
-openssl               1.1.1f-1ubuntu2.19                 deb     
+openssl               1.1.1f-1ubuntu2.20                 deb     
 passwd                1:4.8.1-1ubuntu5.20.04.4           deb     
 perl-base             5.30.0-9ubuntu0.4                  deb     
 pinentry-curses       1.1.0-3build1                      deb     
