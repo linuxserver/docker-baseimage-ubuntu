@@ -10,6 +10,7 @@ bsdutils              1:2.34-0.1ubuntu9.4                deb
 bzip2                 1.0.8-2                            deb     
 ca-certificates       20230311ubuntu0.20.04.1            deb     
 coreutils             8.30-3ubuntu2                      deb     
+cron                  3.0pl1-136ubuntu1                  deb     
 curl                  7.68.0-1ubuntu2.20                 deb     
 dash                  0.5.10.2-6                         deb     
 debconf               1.5.73                             deb     
