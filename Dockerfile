@@ -3,6 +3,7 @@ FROM alpine:3.16 as rootfs-stage
 # environment
 ENV REL=focal
 ENV ARCH=amd64
+
 # install packages
 RUN \
   apk add --no-cache \
@@ -103,6 +104,7 @@ RUN \
     locales && \
   echo "**** install packages ****" && \
   apt-get install -y \
+    cron \
     curl \
     gnupg \
     jq \
