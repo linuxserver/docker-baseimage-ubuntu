@@ -1,7 +1,7 @@
 NAME                  VERSION                            TYPE   
 adduser               3.118ubuntu2                       deb     
-apt                   2.0.9                              deb     
-apt-utils             2.0.9                              deb     
+apt                   2.0.10                             deb     
+apt-utils             2.0.10                             deb     
 base-files            11ubuntu5.7                        deb     
 base-passwd           3.5.47                             deb     
 bash                  5.0-6ubuntu1.2                     deb     
@@ -39,7 +39,7 @@ init-system-helpers   1.57                               deb
 jq                    1.6-1ubuntu0.20.04.1               deb     
 krb5-locales          1.17-6ubuntu4.4                    deb     
 libacl1               2.2.53-6                           deb     
-libapt-pkg6.0         2.0.9                              deb     
+libapt-pkg6.0         2.0.10                             deb     
 libasn1-8-heimdal     7.7.0+dfsg-1ubuntu1.4              deb     
 libassuan0            2.5.3-7ubuntu2                     deb     
 libattr1              1:2.4.48-5                         deb     
