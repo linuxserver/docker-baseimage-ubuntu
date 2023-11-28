@@ -88,7 +88,7 @@ libmount1             2.34-0.1ubuntu9.4                  deb
 libncurses6           6.2-0ubuntu2.1                     deb     
 libncursesw6          6.2-0ubuntu2.1                     deb     
 libnettle7            3.5.1+really3.5.1-2ubuntu0.2       deb     
-libnghttp2-14         1.40.0-1ubuntu0.1                  deb     
+libnghttp2-14         1.40.0-1ubuntu0.2                  deb     
 libnpth0              1.6-1                              deb     
 libonig5              6.9.4-1                            deb     
 libp11-kit0           0.23.20-1ubuntu0.1                 deb     
