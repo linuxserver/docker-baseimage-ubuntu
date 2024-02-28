@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
 
-FROM alpine:3.17 as rootfs-stage
+FROM alpine:3.19 as rootfs-stage
 
 # environment
-ENV REL=jammy
+ENV REL=noble
 ENV ARCH=amd64
 
 # install packages
@@ -11,15 +11,17 @@ RUN \
   apk add --no-cache \
     bash \
     curl \
+    gawk \
     tzdata \
     xz
 
 # grab base tarball
 RUN \
+  BUILD_ID=$(curl -sL https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/${REL}/ubuntu-oci | awk -F'(+build|+files)' "/+build/ && /$ARCH/ {print \$2}") &&\
   mkdir /root-out && \
   curl -o \
     /rootfs.tar.gz -L \
-    https://partner-images.canonical.com/core/${REL}/current/ubuntu-${REL}-core-cloudimg-${ARCH}-root.tar.gz && \
+    https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/${REL}/ubuntu-oci/+build${BUILD_ID}+files/livecd.ubuntu-oci.rootfs.tar.gz && \
   tar xf \
     /rootfs.tar.gz -C \
     /root-out && \
@@ -72,6 +74,7 @@ COPY sources.list /etc/apt/
 
 RUN \
   echo "**** Ripped from Ubuntu Docker Logic ****" && \
+  rm -f /etc/apt/sources.list.d/ubuntu.sources && \
   set -xe && \
   echo '#!/bin/sh' \
     > /usr/sbin/policy-rc.d && \
@@ -114,7 +117,7 @@ RUN \
     curl \
     gnupg \
     jq \
-    netcat \
+    netcat-openbsd \
     tzdata && \
   echo "**** generate locale ****" && \
   locale-gen en_US.UTF-8 && \
