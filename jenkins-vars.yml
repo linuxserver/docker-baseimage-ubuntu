@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-baseimage-ubuntu
 external_type: os
-release_type: prerelease
+release_type: stable
 release_tag: jammy
 ls_branch: jammy
 repo_vars:
