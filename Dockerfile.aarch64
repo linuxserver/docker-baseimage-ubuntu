@@ -11,13 +11,13 @@ RUN \
   apk add --no-cache \
     bash \
     curl \
-    gawk \
+    grep \
     tzdata \
     xz
 
 # grab base tarball
 RUN \
-  BUILD_ID=$(curl -sL https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/${REL}/ubuntu-oci | awk -F'(+build|+files)' "/+build/ && /$ARCH/ {print \$2}") &&\
+  BUILD_ID=$(curl -sL https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/${REL}/ubuntu-oci | grep -Pom1 "\/\+build\/\K(\d+)(?=\/.*${ARCH})") &&\
   mkdir /root-out && \
   curl -o \
     /rootfs.tar.gz -L \
