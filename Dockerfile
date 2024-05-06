@@ -21,7 +21,7 @@ BUILD_ID=$(curl -sL https://launchpad.net/~cloud-images-release-managers/+livefs
   mkdir /root-out && \
   curl -o \
     /rootfs.tar.gz -L \
-    https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/${REL}/ubuntu-oci/+build${BUILD_ID}+files/livecd.ubuntu-oci.rootfs.tar.gz && \
+    https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/${REL}/ubuntu-oci/+build/${BUILD_ID}/+files/livecd.ubuntu-oci.rootfs.tar.gz && \
   tar xf \
     /rootfs.tar.gz -C \
     /root-out && \
