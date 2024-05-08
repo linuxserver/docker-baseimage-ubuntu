@@ -111,6 +111,7 @@ RUN \
     locales && \
   echo "**** install packages ****" && \
   apt-get install -y \
+    catatonit \
     cron \
     curl \
     gnupg \
