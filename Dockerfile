@@ -5,7 +5,7 @@ FROM alpine:3.20 as rootfs-stage
 # environment
 ENV REL=noble
 ENV ARCH=amd64
-ENV TAG=dist-noble-amd64-20240429-0b1b11a0
+ENV TAG=oci-noble-24.04
 
 # install packages
 RUN \
