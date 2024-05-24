@@ -12,16 +12,23 @@ RUN \
   apk add --no-cache \
     bash \
     curl \
-    file \
     git \
+    jq \
     tzdata \
     xz
 
 # grab base tarball
 RUN \
   git clone --depth=1 https://git.launchpad.net/cloud-images/+oci/ubuntu-base -b ${TAG} /build && \
+  cd /build/oci && \
+  DIGEST=$(jq -r '.manifests[0].digest[7:]' < index.json) && \
   cd /build/oci/blobs/sha256 && \
-  for i in ./*; do if $(file -b $i | grep -q 'gzip'); then TARBALL=$i;fi; done && \
+  if jq -e '.layers // empty' < "${DIGEST}" >/dev/null 2>&1; then \
+    TARBALL=$(jq -r '.layers[0].digest[7:]' < ${DIGEST}); \
+  else \
+    MULTIDIGEST=$(jq -r ".manifests[] | select(.platform.architecture == \"${ARCH}\") | .digest[7:]" < ${DIGEST}) && \
+    TARBALL=$(jq -r '.layers[0].digest[7:]' < ${MULTIDIGEST}); \
+  fi && \
   mkdir /root-out && \
   tar xf \
     ${TARBALL} -C \
