@@ -131,6 +131,7 @@ RUN \
     gnupg \
     jq \
     netcat-openbsd \
+    systemd-standalone-sysusers \
     tzdata && \
   echo "**** generate locale ****" && \
   locale-gen en_US.UTF-8 && \
