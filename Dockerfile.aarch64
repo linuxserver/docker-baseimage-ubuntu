@@ -120,11 +120,11 @@ RUN \
   echo "**** install apt-utils and locales ****" && \
   apt-get update && \
   apt-get upgrade -y && \
-  apt-get install -y \
+  apt-get install --no-install-recommends -y \
     apt-utils \
     locales && \
   echo "**** install packages ****" && \
-  apt-get install -y \
+  apt-get install --no-install-recommends -y \
     catatonit \
     cron \
     curl \
