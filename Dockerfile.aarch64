@@ -125,6 +125,7 @@ RUN \
     locales && \
   echo "**** install packages ****" && \
   apt-get install --no-install-recommends -y \
+    ca-certificates \
     catatonit \
     cron \
     curl \
