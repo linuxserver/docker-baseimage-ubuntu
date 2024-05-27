@@ -1,32 +1,43 @@
 # syntax=docker/dockerfile:1
 
-FROM alpine:3.19 as rootfs-stage
+FROM alpine:3.20 as rootfs-stage
 
 # environment
 ENV REL=noble
 ENV ARCH=amd64
+ENV TAG=oci-noble-24.04
 
 # install packages
 RUN \
   apk add --no-cache \
     bash \
     curl \
-    gawk \
+    git \
+    jq \
     tzdata \
     xz
 
 # grab base tarball
 RUN \
-  BUILD_ID=$(curl -sL https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/${REL}/ubuntu-oci | awk -F'(+build|+files)' "/+build/ && /$ARCH/ {print \$2}") &&\
+  git clone --depth=1 https://git.launchpad.net/cloud-images/+oci/ubuntu-base -b ${TAG} /build && \
+  cd /build/oci && \
+  DIGEST=$(jq -r '.manifests[0].digest[7:]' < index.json) && \
+  cd /build/oci/blobs/sha256 && \
+  if jq -e '.layers // empty' < "${DIGEST}" >/dev/null 2>&1; then \
+    TARBALL=$(jq -r '.layers[0].digest[7:]' < ${DIGEST}); \
+  else \
+    MULTIDIGEST=$(jq -r ".manifests[] | select(.platform.architecture == \"${ARCH}\") | .digest[7:]" < ${DIGEST}) && \
+    TARBALL=$(jq -r '.layers[0].digest[7:]' < ${MULTIDIGEST}); \
+  fi && \
   mkdir /root-out && \
-  curl -o \
-    /rootfs.tar.gz -L \
-    https://launchpad.net/~cloud-images-release-managers/+livefs/ubuntu/${REL}/ubuntu-oci/+build${BUILD_ID}+files/livecd.ubuntu-oci.rootfs.tar.gz && \
   tar xf \
-    /rootfs.tar.gz -C \
+    ${TARBALL} -C \
     /root-out && \
   rm -rf \
-    /root-out/var/log/*
+    /root-out/var/log/* \
+    /root-out/home/ubuntu \
+    /root-out/root/{.ssh,.bashrc,.profile} \
+    /build
 
 # set version for s6 overlay
 ARG S6_OVERLAY_VERSION="3.1.6.2"
@@ -120,6 +131,7 @@ RUN \
     gnupg \
     jq \
     netcat-openbsd \
+    systemd-standalone-sysusers \
     tzdata && \
   echo "**** generate locale ****" && \
   locale-gen en_US.UTF-8 && \
@@ -132,6 +144,7 @@ RUN \
     /defaults \
     /lsiopy && \
   echo "**** cleanup ****" && \
+  userdel ubuntu && \
   apt-get autoremove && \
   apt-get clean && \
   rm -rf \
