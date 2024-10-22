@@ -145,11 +145,6 @@ RUN \
     /config \
     /defaults \
     /lsiopy && \
-  echo "**** add qemu ****" && \
-  curl -o \
-  /usr/bin/qemu-aarch64-static -L \
-    "https://lsio-ci.ams3.digitaloceanspaces.com/qemu-aarch64-static" && \
-  chmod +x /usr/bin/qemu-aarch64-static && \
   echo "**** cleanup ****" && \
   userdel ubuntu && \
   apt-get autoremove && \
