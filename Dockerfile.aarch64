@@ -40,7 +40,7 @@ RUN \
     /build
 
 # set version for s6 overlay
-ARG S6_OVERLAY_VERSION="3.2.0.2"
+ARG S6_OVERLAY_VERSION="3.2.1.0"
 ARG S6_OVERLAY_ARCH="aarch64"
 
 # add s6 overlay
