@@ -45,8 +45,8 @@ libblkid1            2.37.2-4ubuntu3.4                        deb
 libbrotli1           1.0.9-2build6                            deb     
 libbsd0              0.11.5-1                                 deb     
 libbz2-1.0           1.0.8-5build1                            deb     
-libc-bin             2.35-0ubuntu3.12                         deb     
-libc6                2.35-0ubuntu3.12                         deb     
+libc-bin             2.35-0ubuntu3.13                         deb     
+libc6                2.35-0ubuntu3.13                         deb     
 libcap-ng0           0.7.9-2.2build3                          deb     
 libcap2              1:2.44-1ubuntu0.22.04.2                  deb     
 libcom-err2          1.46.5-2ubuntu1.2                        deb     
@@ -70,8 +70,8 @@ libkeyutils1         1.6.1-2ubuntu3                           deb
 libkrb5-3            1.19.2-2ubuntu0.7                        deb     
 libkrb5support0      1.19.2-2ubuntu0.7                        deb     
 libksba8             1.6.0-2ubuntu0.2                         deb     
-libldap-2.5-0        2.5.19+dfsg-0ubuntu0.22.04.1             deb     
-libldap-common       2.5.19+dfsg-0ubuntu0.22.04.1             deb     
+libldap-2.5-0        2.5.20+dfsg-0ubuntu0.22.04.1             deb     
+libldap-common       2.5.20+dfsg-0ubuntu0.22.04.1             deb     
 liblz4-1             1.9.3-2build2                            deb     
 liblzma5             5.2.5-2ubuntu1                           deb     
 libmd0               1.0.4-1build1                            deb     
@@ -118,7 +118,7 @@ libunistring2        1.0-1                                    deb
 libuuid1             2.37.2-4ubuntu3.4                        deb     
 libxxhash0           0.8.1-1                                  deb     
 libzstd1             1.4.8+dfsg-3build1                       deb     
-locales              2.35-0ubuntu3.12                         deb     
+locales              2.35-0ubuntu3.13                         deb     
 login                1:4.8.1-2ubuntu2.2                       deb     
 logsave              1.46.5-2ubuntu1.2                        deb     
 lsb-base             11.1.0ubuntu4                            deb     
