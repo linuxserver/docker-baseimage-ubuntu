@@ -85,7 +85,7 @@ ENV HOME="/root" \
   PATH="/lsiopy/bin:$PATH"
 
 # copy sources
-COPY sources.list /etc/apt/
+COPY sources.list.riscv /etc/apt/sources.list
 
 RUN \
   echo "**** Ripped from Ubuntu Docker Logic ****" && \
