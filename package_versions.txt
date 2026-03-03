@@ -10,7 +10,7 @@ ca-certificates      20240203~22.04.1                         deb
 catatonit            0.1.7-1                                  deb     
 coreutils            8.32-4.1ubuntu1.2                        deb     
 cron                 3.0pl1-137ubuntu3                        deb     
-curl                 7.81.0-1ubuntu1.21                       deb     
+curl                 7.81.0-1ubuntu1.22                       deb     
 dash                 0.5.11+git20210903+057cd650a4ed-3build1  deb     
 debconf              1.5.79ubuntu1                            deb     
 debianutils          5.5-1ubuntu2                             deb     
@@ -19,7 +19,7 @@ dirmngr              2.2.27-3ubuntu2.5                        deb
 dpkg                 1.21.1ubuntu2.6                          deb     
 e2fsprogs            1.46.5-2ubuntu1.2                        deb     
 findutils            4.8.0-1ubuntu3                           deb     
-gcc-12-base          12.3.0-1ubuntu1~22.04.2                  deb     
+gcc-12-base          12.3.0-1ubuntu1~22.04.3                  deb     
 gnupg                2.2.27-3ubuntu2.5                        deb     
 gnupg-l10n           2.2.27-3ubuntu2.5                        deb     
 gnupg-utils          2.2.27-3ubuntu2.5                        deb     
@@ -51,12 +51,12 @@ libcap-ng0           0.7.9-2.2build3                          deb
 libcap2              1:2.44-1ubuntu0.22.04.2                  deb     
 libcom-err2          1.46.5-2ubuntu1.2                        deb     
 libcrypt1            1:4.4.27-1                               deb     
-libcurl4             7.81.0-1ubuntu1.21                       deb     
+libcurl4             7.81.0-1ubuntu1.22                       deb     
 libdb5.3             5.3.28+dfsg1-0.8ubuntu3                  deb     
 libdebconfclient0    0.261ubuntu1                             deb     
 libext2fs2           1.46.5-2ubuntu1.2                        deb     
 libffi8              3.4.2-4                                  deb     
-libgcc-s1            12.3.0-1ubuntu1~22.04.2                  deb     
+libgcc-s1            12.3.0-1ubuntu1~22.04.3                  deb     
 libgcrypt20          1.9.4-3ubuntu3                           deb     
 libgmp10             2:6.2.1+dfsg-3ubuntu1                    deb     
 libgnutls30          3.7.3-4ubuntu1.8                         deb     
@@ -107,7 +107,7 @@ libsqlite3-0         3.37.2-2ubuntu0.5                        deb
 libss2               1.46.5-2ubuntu1.2                        deb     
 libssh-4             0.9.6-2ubuntu0.22.04.6                   deb     
 libssl3              3.0.2-0ubuntu1.21                        deb     
-libstdc++6           12.3.0-1ubuntu1~22.04.2                  deb     
+libstdc++6           12.3.0-1ubuntu1~22.04.3                  deb     
 libsystemd0          249.11-0ubuntu3.17                       deb     
 libtasn1-6           4.18.0-4ubuntu0.2                        deb     
 libtinfo6            6.3-2ubuntu0.1                           deb     
