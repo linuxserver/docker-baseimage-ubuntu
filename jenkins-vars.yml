@@ -6,7 +6,6 @@ external_type: os
 release_type: prerelease
 release_tag: resolute
 ls_branch: resolute
-build_riscv64: false
 repo_vars:
   - BUILD_VERSION_ARG = 'OS'
   - LS_USER = 'linuxserver'
