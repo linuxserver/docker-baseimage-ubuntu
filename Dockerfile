@@ -84,11 +84,10 @@ ENV HOME="/root" \
   PATH="/lsiopy/bin:$PATH"
 
 # copy sources
-COPY sources.list /etc/apt/
+COPY ubuntu.sources /etc/apt/sources.d/ubuntu.sources
 
 RUN \
   echo "**** Ripped from Ubuntu Docker Logic ****" && \
-  rm -f /etc/apt/sources.list.d/ubuntu.sources && \
   set -xe && \
   echo '#!/bin/sh' \
     > /usr/sbin/policy-rc.d && \
