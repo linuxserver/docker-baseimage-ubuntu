@@ -2,7 +2,7 @@ NAME                           VERSION                                TYPE
 adduser                        3.153ubuntu1                           deb          
 apt                            3.2.0                                  deb          
 apt-utils                      3.2.0                                  deb          
-base-files                     14ubuntu5                              deb          
+base-files                     14ubuntu6                              deb          
 base-passwd                    3.6.8                                  deb          
 bash                           5.3-2ubuntu1                           deb          
 bash-completion                1:2.16.0-8build1                       deb          
@@ -25,7 +25,7 @@ findutils                      4.10.0-3build2                         deb
 gcc-16-base                    16-20260322-1ubuntu1                   deb          
 github.com/GehirnInc/crypt     v0.0.0-20230320061759-8cc1b52080c5     go-module    
 github.com/canonical/go-flags  v0.0.0-20230403090104-105d09a091b8     go-module    
-github.com/canonical/pebble    v1.29.1-0.20260225012155-a7f74fa3c4fe  go-module    
+github.com/canonical/pebble    v1.30.2-0.20260416224941-1b3384178e3f  go-module    
 github.com/canonical/x-go      v0.0.0-20230522092633-7947a7587f5b     go-module    
 github.com/gorilla/mux         v1.8.1                                 go-module    
 github.com/gorilla/websocket   v1.5.1                                 go-module    
@@ -66,7 +66,6 @@ libc-bin                       2.43-2ubuntu2                          deb
 libc-gconv-modules-extra       2.43-2ubuntu2                          deb          
 libc6                          2.43-2ubuntu2                          deb          
 libcap-ng0                     0.8.5-4build5                          deb          
-libcap2                        1:2.75-10ubuntu2                       deb          
 libcom-err2                    1.47.2-3ubuntu4                        deb          
 libcrypt1                      1:4.5.1-1                              deb          
 libcurl4t64                    8.18.0-1ubuntu2                        deb          
@@ -151,7 +150,7 @@ readline-common                8.3-4                                  deb
 rust-coreutils                 0.8.0-0ubuntu3                         deb          
 sed                            4.9-2build3                            deb          
 sensible-utils                 0.0.26build1                           deb          
-stdlib                         go1.24.12                              go-module    
+stdlib                         go1.26.2                               go-module    
 systemd-standalone-sysusers    259.5-0ubuntu3                         deb          
 sysvinit-utils                 3.15-5ubuntu1                          deb          
 tar                            1.35+dfsg-4                            deb          
