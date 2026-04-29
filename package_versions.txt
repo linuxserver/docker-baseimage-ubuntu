@@ -34,7 +34,7 @@ grep                 3.7-1build1                              deb
 gzip                 1.10-4ubuntu4.1                          deb     
 hostname             3.23ubuntu2                              deb     
 init-system-helpers  1.62                                     deb     
-jq                   1.6-2.1ubuntu3.1                         deb     
+jq                   1.6-2.1ubuntu3.2                         deb     
 libacl1              2.3.1-1                                  deb     
 libapt-pkg6.0        2.4.14                                   deb     
 libassuan0           2.5.5-1build1                            deb     
@@ -64,7 +64,7 @@ libgpg-error0        1.43-3                                   deb
 libgssapi-krb5-2     1.19.2-2ubuntu0.7                        deb     
 libhogweed6          3.7.3-1build2                            deb     
 libidn2-0            2.3.2-2build1                            deb     
-libjq1               1.6-2.1ubuntu3.1                         deb     
+libjq1               1.6-2.1ubuntu3.2                         deb     
 libk5crypto3         1.19.2-2ubuntu0.7                        deb     
 libkeyutils1         1.6.1-2ubuntu3                           deb     
 libkrb5-3            1.19.2-2ubuntu0.7                        deb     
