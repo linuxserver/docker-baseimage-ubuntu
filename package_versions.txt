@@ -13,7 +13,7 @@ coreutils                      9.5-1ubuntu2+0.0.0~ubuntu25            deb
 coreutils-from-uutils          0.0.0~ubuntu25                         deb          
 cron                           3.0pl1-200ubuntu1                      deb          
 cron-daemon-common             3.0pl1-200ubuntu1                      deb          
-curl                           8.18.0-1ubuntu2                        deb          
+curl                           8.18.0-1ubuntu2.1                      deb          
 dash                           0.5.12-12ubuntu3                       deb          
 debconf                        1.5.92                                 deb          
 debianutils                    5.23.2build1                           deb          
@@ -68,7 +68,7 @@ libc6                          2.43-2ubuntu2                          deb
 libcap-ng0                     0.8.5-4build5                          deb          
 libcom-err2                    1.47.2-3ubuntu4                        deb          
 libcrypt1                      1:4.5.1-1                              deb          
-libcurl4t64                    8.18.0-1ubuntu2                        deb          
+libcurl4t64                    8.18.0-1ubuntu2.1                      deb          
 libdb5.3t64                    5.3.28+dfsg2-10ubuntu1                 deb          
 libdebconfclient0              0.280ubuntu1                           deb          
 libext2fs2t64                  1.47.2-3ubuntu4                        deb          
@@ -148,7 +148,7 @@ procps                         2:4.0.4-9ubuntu1                       deb
 publicsuffix                   20260129.1928-1                        deb          
 readline-common                8.3-4                                  deb          
 rust-coreutils                 0.8.0-0ubuntu3                         deb          
-sed                            4.9-2build3                            deb          
+sed                            4.9-2ubuntu1                           deb          
 sensible-utils                 0.0.26build1                           deb          
 stdlib                         go1.26.2                               go-module    
 systemd-standalone-sysusers    259.5-0ubuntu3                         deb          
