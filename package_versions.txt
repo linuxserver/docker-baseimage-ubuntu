@@ -59,7 +59,7 @@ libffi8              3.4.2-4                                  deb
 libgcc-s1            12.3.0-1ubuntu1~22.04.3                  deb     
 libgcrypt20          1.9.4-3ubuntu3                           deb     
 libgmp10             2:6.2.1+dfsg-3ubuntu1                    deb     
-libgnutls30          3.7.3-4ubuntu1.8                         deb     
+libgnutls30          3.7.3-4ubuntu1.9                         deb     
 libgpg-error0        1.43-3                                   deb     
 libgssapi-krb5-2     1.19.2-2ubuntu0.7                        deb     
 libhogweed6          3.7.3-1build2                            deb     
