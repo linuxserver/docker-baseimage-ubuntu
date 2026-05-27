@@ -61,7 +61,7 @@ libffi8                      3.4.6-1build1                      deb
 libgcc-s1                    14.2.0-4ubuntu2~24.04.1            deb     
 libgcrypt20                  1.10.3-2build1                     deb     
 libgmp10                     2:6.3.0+dfsg-2ubuntu6.1            deb     
-libgnutls30t64               3.8.3-1.1ubuntu3.5                 deb     
+libgnutls30t64               3.8.3-1.1ubuntu3.6                 deb     
 libgpg-error0                1.47-3build2.1                     deb     
 libgssapi-krb5-2             1.20.1-6ubuntu2.6                  deb     
 libhogweed6t64               3.9.1-2.2build1.1                  deb     
