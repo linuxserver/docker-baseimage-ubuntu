@@ -76,7 +76,7 @@ libffi8                        3.5.2-4                                deb
 libgcc-s1                      16-20260322-1ubuntu1                   deb          
 libgcrypt20                    1.12.0-2                               deb          
 libgmp10                       2:6.3.0+dfsg-5ubuntu2                  deb          
-libgnutls30t64                 3.8.12-2ubuntu1                        deb          
+libgnutls30t64                 3.8.12-2ubuntu1.1                      deb          
 libgpg-error0                  1.58-2                                 deb          
 libgssapi-krb5-2               1.22.1-2ubuntu4                        deb          
 libhogweed6t64                 3.10.2-1                               deb          
@@ -119,7 +119,7 @@ libsepol2                      3.9-2                                  deb
 libsmartcols1                  2.41.3-3ubuntu2                        deb          
 libsqlite3-0                   3.46.1-9                               deb          
 libss2                         1.47.2-3ubuntu4                        deb          
-libssh2-1t64                   1.11.1-1build2                         deb          
+libssh2-1t64                   1.11.1-1ubuntu0.26.04.1                deb          
 libssl3t64                     3.5.5-1ubuntu3                         deb          
 libstdc++6                     16-20260322-1ubuntu1                   deb          
 libsystemd0                    259.5-0ubuntu3                         deb          
