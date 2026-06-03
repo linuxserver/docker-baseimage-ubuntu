@@ -74,7 +74,7 @@ libdebconfclient0              0.280ubuntu1                           deb
 libext2fs2t64                  1.47.2-3ubuntu4                        deb          
 libffi8                        3.5.2-4                                deb          
 libgcc-s1                      16-20260322-1ubuntu1                   deb          
-libgcrypt20                    1.12.0-2                               deb          
+libgcrypt20                    1.12.0-2ubuntu0.1                      deb          
 libgmp10                       2:6.3.0+dfsg-5ubuntu2                  deb          
 libgnutls30t64                 3.8.12-2ubuntu1.1                      deb          
 libgpg-error0                  1.58-2                                 deb          
