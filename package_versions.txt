@@ -57,7 +57,7 @@ libdebconfclient0    0.261ubuntu1                             deb
 libext2fs2           1.46.5-2ubuntu1.2                        deb     
 libffi8              3.4.2-4                                  deb     
 libgcc-s1            12.3.0-1ubuntu1~22.04.3                  deb     
-libgcrypt20          1.9.4-3ubuntu3                           deb     
+libgcrypt20          1.9.4-3ubuntu3.2                         deb     
 libgmp10             2:6.2.1+dfsg-3ubuntu1                    deb     
 libgnutls30          3.7.3-4ubuntu1.9                         deb     
 libgpg-error0        1.43-3                                   deb     
@@ -73,7 +73,7 @@ libksba8             1.6.0-2ubuntu0.2                         deb
 libldap-2.5-0        2.5.20+dfsg-0ubuntu0.22.04.1             deb     
 libldap-common       2.5.20+dfsg-0ubuntu0.22.04.1             deb     
 liblz4-1             1.9.3-2build2                            deb     
-liblzma5             5.2.5-2ubuntu1                           deb     
+liblzma5             5.2.5-2ubuntu1.1                         deb     
 libmd0               1.0.4-1build1                            deb     
 libmount1            2.37.2-4ubuntu3.5                        deb     
 libncurses6          6.3-2ubuntu0.1                           deb     
