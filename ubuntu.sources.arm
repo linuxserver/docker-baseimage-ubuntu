@@ -1,10 +1,10 @@
-Types: deb
+Types: deb deb-src
 URIs: http://ports.ubuntu.com/ubuntu-ports
 Suites: resolute resolute-updates resolute-backports
 Components: main restricted universe multiverse
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 
-Types: deb
+Types: deb deb-src
 URIs: https://ports.ubuntu.com/ubuntu-ports
 Suites: resolute-security
 Components: main restricted universe multiverse
