@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-baseimage-ubuntu
 external_type: os
-release_type: stable
+release_type: prerelease
 release_tag: noble
 ls_branch: noble
 build_riscv64: false
