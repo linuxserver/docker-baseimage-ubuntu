@@ -13,7 +13,7 @@ coreutils                      9.5-1ubuntu2+0.0.0~ubuntu25            deb
 coreutils-from-uutils          0.0.0~ubuntu25                         deb          
 cron                           3.0pl1-200ubuntu1                      deb          
 cron-daemon-common             3.0pl1-200ubuntu1                      deb          
-curl                           8.18.0-1ubuntu2.2                      deb          
+curl                           8.18.0-1ubuntu2.3                      deb          
 dash                           0.5.12-12ubuntu3                       deb          
 debconf                        1.5.92                                 deb          
 debianutils                    5.23.2build1                           deb          
@@ -25,7 +25,7 @@ findutils                      4.10.0-3build2                         deb
 gcc-16-base                    16-20260322-1ubuntu1                   deb          
 github.com/GehirnInc/crypt     v0.0.0-20230320061759-8cc1b52080c5     go-module    
 github.com/canonical/go-flags  v0.0.0-20230403090104-105d09a091b8     go-module    
-github.com/canonical/pebble    v1.31.1-0.20260528050051-33f10658d3fd  go-module    
+github.com/canonical/pebble    v1.32.1-0.20260630051629-e583e44ebd02  go-module    
 github.com/canonical/x-go      v0.0.0-20230522092633-7947a7587f5b     go-module    
 github.com/gorilla/mux         v1.8.1                                 go-module    
 github.com/gorilla/websocket   v1.5.1                                 go-module    
@@ -68,7 +68,7 @@ libc6                          2.43-2ubuntu2                          deb
 libcap-ng0                     0.8.5-4build5                          deb          
 libcom-err2                    1.47.2-3ubuntu4                        deb          
 libcrypt1                      1:4.5.1-1                              deb          
-libcurl4t64                    8.18.0-1ubuntu2.2                      deb          
+libcurl4t64                    8.18.0-1ubuntu2.3                      deb          
 libdb5.3t64                    5.3.28+dfsg2-10ubuntu1                 deb          
 libdebconfclient0              0.280ubuntu1                           deb          
 libext2fs2t64                  1.47.2-3ubuntu4                        deb          
@@ -119,7 +119,7 @@ libsepol2                      3.9-2                                  deb
 libsmartcols1                  2.41.3-3ubuntu2                        deb          
 libsqlite3-0                   3.46.1-9ubuntu0.1                      deb          
 libss2                         1.47.2-3ubuntu4                        deb          
-libssh2-1t64                   1.11.1-1ubuntu0.26.04.2                deb          
+libssh2-1t64                   1.11.1-1ubuntu0.26.04.3                deb          
 libssl3t64                     3.5.5-1ubuntu3.2                       deb          
 libstdc++6                     16-20260322-1ubuntu1                   deb          
 libsystemd0                    259.5-0ubuntu3                         deb          
@@ -150,11 +150,11 @@ readline-common                8.3-4                                  deb
 rust-coreutils                 0.8.0-0ubuntu3                         deb          
 sed                            4.9-2ubuntu1                           deb          
 sensible-utils                 0.0.26build1                           deb          
-stdlib                         go1.26.3                               go-module    
+stdlib                         go1.26.4                               go-module    
 systemd-standalone-sysusers    259.5-0ubuntu3                         deb          
 sysvinit-utils                 3.15-5ubuntu1                          deb          
 tar                            1.35+dfsg-4ubuntu0.2                   deb          
-tzdata                         2026a-3ubuntu1                         deb          
+tzdata                         2026b-0ubuntu0.26.04.1                 deb          
 ubuntu-keyring                 2023.11.28.1build1                     deb          
 util-linux                     2.41.3-3ubuntu2                        deb          
 zlib1g                         1:1.3.dfsg+really1.3.1-1ubuntu3        deb          
