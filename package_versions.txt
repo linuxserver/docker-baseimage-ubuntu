@@ -88,7 +88,7 @@ libpam-modules       1.4.0-11ubuntu2.8                        deb
 libpam-modules-bin   1.4.0-11ubuntu2.8                        deb     
 libpam-runtime       1.4.0-11ubuntu2.8                        deb     
 libpam0g             1.4.0-11ubuntu2.8                        deb     
-libpcre2-8-0         10.39-3ubuntu0.1                         deb     
+libpcre2-8-0         10.39-3ubuntu0.2                         deb     
 libpcre3             2:8.39-13ubuntu0.22.04.1                 deb     
 libprocps8           2:3.3.17-6ubuntu2.1                      deb     
 libpsl5              0.21.0-1.2build2                         deb     
